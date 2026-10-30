@@ -4,257 +4,278 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Proficia</title>
-<meta name="description" content="Proficia maakt, toetst en implementeert AI-toepassingen en automatisering voor bedrijfsprocessen. AI waar het kan, de mens waar het moet.">
+<meta name="description" content="Proficia ontwerpt en implementeert AI-oplossingen met de mens in de regie. AI waar het kan, de mens waar het moet.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Source+Sans+3:wght@400;600&display=swap">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta property="og:title" content="Proficia">
-<meta property="og:description" content="AI waar het kan, de mens waar het moet. Proficia maakt, toetst en implementeert AI-toepassingen en automatisering voor bedrijfsprocessen.">
+<meta property="og:description" content="AI waar het kan, de mens waar het moet. Proficia ontwerpt en implementeert AI-oplossingen met de mens in de regie.">
 <meta property="og:url" content="https://proficia.nl/">
+<link rel="alternate" hreflang="nl" href="https://proficia.nl/">
 <style>
-/* Layout: smalle tekstkolom links, één 'boekingsvoorstel'-object als held; secties gescheiden door ruimte, niet door kaarten */
+/* Layout: ingetogen adviespraktijk. Navy openingsband, daarna kop links / inhoud rechts met dunne lijnen; één uitgelichte toepassing; groen alleen als accent. */
 :root{
   --navy:#0f172a;
   --green:#10b981;
   --green-ink:#047857;
-  --bg:#f7f9f8;
-  --surface:#ffffff;
+  --bg:#ffffff;
+  --band:#f5f7f6;
   --fg:#0f172a;
-  --muted:#4b5a6b;
-  --line:#dde5e1;
-  --chip:#e7f6ef;
-  --font-display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
-  --font-body:Calibri, Carlito, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  --font-mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --muted:#475467;
+  --line:#e2e8e5;
+  --on-navy:#e9eef4;
+  --on-navy-muted:#a7b4c4;
+  --font-display:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-body:Calibri, Carlito, "Source Sans 3", "Segoe UI", Arial, sans-serif;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#0b1120; --surface:#111a2e; --fg:#e8eef5; --muted:#9fb0c2; --line:#22304a;
-    --chip:#0f2e27; --green-ink:#34d399; color-scheme:dark;
+    --bg:#0b1120; --band:#0f172a; --fg:#e9eef4; --muted:#a7b4c4; --line:#223047; --green-ink:#34d399; color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#0b1120; --surface:#111a2e; --fg:#e8eef5; --muted:#9fb0c2; --line:#22304a;
-  --chip:#0f2e27; --green-ink:#34d399; color-scheme:dark;
+  --bg:#0b1120; --band:#0f172a; --fg:#e9eef4; --muted:#a7b4c4; --line:#223047; --green-ink:#34d399; color-scheme:dark;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-body{
-  margin:0;background:var(--bg);color:var(--fg);
-  font-family:var(--font-body);font-size:1.125rem;line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-}
-.wrap{
-  max-width:1120px;margin:0 auto;
-  padding-left:max(16px, env(safe-area-inset-left, 0px));
-  padding-right:max(16px, env(safe-area-inset-right, 0px));
-}
-a{color:var(--green-ink)}
-a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:4px}
-h1,h2,h3{font-family:var(--font-display);line-height:1.1;text-wrap:balance;margin:0}
-.eyebrow{font-family:var(--font-mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--green-ink)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:1.125rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+a{color:var(--green-ink);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;line-height:1.15;text-wrap:balance;margin:0}
+.label{font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green-ink)}
 
-/* header */
-header{position:sticky;top:env(safe-area-inset-top, 0px);z-index:5;background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top, 0px);z-index:10;background:var(--bg)}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--fg);font-family:var(--font-display);font-weight:700;font-size:1.25rem}
-.brand svg{width:34px;height:20px}
-nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
-nav a{color:var(--muted);text-decoration:none;font-size:1rem}
-nav a:hover{color:var(--fg)}
-@media (max-width:640px){nav li:not(:last-child){display:none}}
+/* topbalk */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top, 0px);z-index:10;background:var(--navy)}
+header{background:var(--navy);color:var(--on-navy);position:sticky;top:env(safe-area-inset-top, 0px);z-index:5;border-bottom:1px solid rgba(255,255,255,.08)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:16px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none;font-weight:700;font-size:1.3rem;letter-spacing:.01em}
+.brand svg{width:32px;height:19px}
+nav{display:flex;align-items:center;gap:24px}
+nav ul{display:flex;align-items:center;gap:24px;list-style:none;margin:0;padding:0}
+nav a{color:var(--on-navy-muted);text-decoration:none;font-size:.98rem}
+nav a:hover{color:#fff}
+.lang{display:flex;border:1px solid rgba(255,255,255,.3);border-radius:2px;overflow:hidden}
+.lang button{font:600 .82rem var(--font-body);letter-spacing:.06em;background:transparent;color:var(--on-navy-muted);border:0;padding:6px 10px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:#fff;color:var(--navy)}
+@media (max-width:820px){nav ul{display:none}}
 
-/* hero */
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;padding-block:72px 64px}
-.hero > *{min-width:0}
-.hero h1{font-size:clamp(2.4rem, 5.4vw, 4.1rem);font-weight:700;letter-spacing:-.02em;margin-top:14px}
-.hero h1 em{font-style:normal;color:var(--green-ink)}
-.lede{font-size:1.25rem;color:var(--muted);max-width:34em;margin:22px 0 30px}
-.actions{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-flex;align-items:center;gap:8px;font:600 1rem var(--font-body);padding:12px 20px;border-radius:999px;text-decoration:none;border:1px solid transparent}
-.btn.primary{background:var(--navy);color:#fff}
-:root[data-theme="dark"] .btn.primary{background:var(--green);color:#06221a}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn.primary{background:var(--green);color:#06221a}}
-.btn.ghost{border-color:var(--line);color:var(--fg)}
-@media (max-width:860px){.hero{grid-template-columns:1fr;gap:40px;padding-block:48px}}
-
-/* het voorbeeld-object: boekingsvoorstel */
-.ticket{background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:0 18px 40px -24px rgba(15,23,42,.35);overflow:hidden;font-family:var(--font-mono);font-size:.82rem}
-.ticket-head{display:flex;justify-content:space-between;gap:12px;padding:14px 18px;border-bottom:1px dashed var(--line);color:var(--muted)}
-.ticket-head b{color:var(--fg);font-weight:500}
-.rows{padding:6px 18px}
-.row{display:grid;grid-template-columns:1fr auto auto;gap:14px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
-.row:last-child{border-bottom:0}
-.row span:first-child{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.chip{font-size:.7rem;padding:2px 8px;border-radius:999px;background:var(--chip);color:var(--green-ink);white-space:nowrap}
-.chip.mens{background:color-mix(in srgb, #f59e0b 18%, transparent);color:#b45309}
-:root[data-theme="dark"] .chip.mens{color:#fbbf24}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .chip.mens{color:#fbbf24}}
-.ticket-foot{display:flex;justify-content:space-between;gap:12px;padding:14px 18px;background:color-mix(in srgb, var(--green) 8%, var(--surface));color:var(--fg)}
-.caption{font-family:var(--font-mono);font-size:.72rem;color:var(--muted);margin-top:10px}
+/* opening */
+.intro{background:var(--navy);color:var(--on-navy)}
+.intro .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:64px;padding-block:92px 84px;align-items:end}
+.intro .wrap > *{min-width:0}
+.intro .label{color:#6ee7b7}
+.intro h1{color:#fff;font-size:clamp(2.4rem, 5vw, 3.8rem);letter-spacing:-.01em;margin:18px 0 22px}
+.intro h1 span{display:block;color:#6ee7b7}
+.intro p.lede{color:var(--on-navy-muted);font-size:1.22rem;max-width:32em;margin:0 0 34px}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;font:600 1rem var(--font-body);padding:13px 22px;border-radius:2px;text-decoration:none;border:1px solid transparent}
+.btn.solid{background:var(--green);color:#052e22}
+.btn.solid:hover{background:#34d399}
+.btn.line{border-color:rgba(255,255,255,.35);color:#fff}
+.btn.line:hover{border-color:#fff}
+.focus{border-left:2px solid var(--green);padding-left:24px}
+.focus h2{font-family:var(--font-body);font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6ee7b7;margin-bottom:14px}
+.focus ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.focus li{color:var(--on-navy);font-size:1.05rem;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.1)}
+.focus li:last-child{border-bottom:0;padding-bottom:0}
+@media (max-width:860px){.intro .wrap{grid-template-columns:1fr;gap:44px;padding-block:56px}}
 
 /* secties */
-section{padding-block:72px;border-top:1px solid var(--line)}
-.section-head{display:grid;grid-template-columns:minmax(0,380px) 1fr;gap:48px;margin-bottom:40px}
-.section-head > *{min-width:0}
-.section-head h2{font-size:clamp(1.9rem, 3.4vw, 2.6rem);font-weight:700;letter-spacing:-.01em;margin-top:10px}
-.section-head p{color:var(--muted);margin:0;max-width:36em;align-self:end}
-@media (max-width:860px){.section-head{grid-template-columns:1fr;gap:12px}}
+section{padding-block:84px;border-bottom:1px solid var(--line)}
+.split{display:grid;grid-template-columns:300px 1fr;gap:56px}
+.split > *{min-width:0}
+.split h2{font-size:clamp(1.8rem, 3vw, 2.3rem);margin-top:12px}
+.lead{color:var(--muted);margin:0 0 36px;max-width:38em}
+@media (max-width:860px){.split{grid-template-columns:1fr;gap:16px}section{padding-block:56px}}
 
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
-.service{min-width:0;padding-top:20px;border-top:3px solid var(--green)}
-.service h3{font-size:1.35rem;font-weight:700;margin-bottom:10px}
-.service p{margin:0 0 12px;color:var(--muted)}
-.service ul{margin:0;padding-left:1.1em;color:var(--fg)}
-.service li{margin-bottom:4px}
-@media (max-width:860px){.services{grid-template-columns:1fr}}
+.principles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px}
+.principle{padding-block:22px;border-top:1px solid var(--line)}
+.principle h3{font-size:1.2rem;margin-bottom:6px}
+.principle p{margin:0;color:var(--muted);font-size:1.04rem}
+@media (max-width:640px){.principles{grid-template-columns:1fr}}
 
-.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s}
-.steps li{min-width:0;padding:0 24px 0 0;position:relative}
-.steps li::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;font-family:var(--font-display);font-weight:700;margin-bottom:16px}
-:root[data-theme="dark"] .steps li::before{background:var(--green);color:#06221a}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .steps li::before{background:var(--green);color:#06221a}}
-.steps li::after{content:"";position:absolute;top:19px;left:46px;right:8px;height:1px;background:var(--line)}
-.steps li:last-child::after{display:none}
-.steps h3{font-size:1.2rem;margin-bottom:8px}
-.steps p{margin:0;color:var(--muted);font-size:1.02rem}
-@media (max-width:860px){.steps{grid-template-columns:1fr 1fr;row-gap:36px}.steps li::after{display:none}}
-@media (max-width:520px){.steps{grid-template-columns:1fr}}
+.feature{background:var(--band);border-left:3px solid var(--green);padding:32px 34px;margin-bottom:36px}
+.feature .label{margin-bottom:10px}
+.feature h3{font-size:clamp(1.4rem, 2.4vw, 1.75rem);margin-bottom:12px}
+.feature p{margin:0 0 18px;max-width:40em}
+.feature ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 32px}
+.feature li{position:relative;padding-left:22px;font-size:1.04rem}
+.feature li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:2px;background:var(--green)}
+@media (max-width:640px){.feature{padding:24px 20px}.feature ul{grid-template-columns:1fr}}
+.cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.case{border-top:1px solid var(--line);padding-top:18px}
+.case h3{font-size:1.15rem;margin-bottom:8px}
+.case p{margin:0;color:var(--muted);font-size:1.02rem}
+@media (max-width:820px){.cases{grid-template-columns:1fr;gap:20px}}
 
-.about{display:grid;grid-template-columns:minmax(0,380px) 1fr;gap:48px}
-.about > *{min-width:0}
-.about .body{max-width:40em}
-.about .body p{margin:0 0 16px}
-.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;padding:0;list-style:none}
-.facts li{font-family:var(--font-mono);font-size:.78rem;padding:6px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
-@media (max-width:860px){.about{grid-template-columns:1fr;gap:12px}}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 48px;counter-reset:s}
+.steps li{border-top:2px solid var(--green);padding-top:18px}
+.steps li::before{counter-increment:s;content:attr(data-step) " " counter(s);display:block;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green-ink);margin-bottom:8px}
+.steps h3{font-size:1.25rem;margin-bottom:8px}
+.steps p{margin:0;color:var(--muted)}
+@media (max-width:640px){.steps{grid-template-columns:1fr}}
 
-.contact{background:var(--navy);color:#e8eef5;border-top:0}
-.contact .eyebrow{color:#6ee7b7}
-.contact h2{color:#fff;font-size:clamp(1.9rem, 3.4vw, 2.6rem);margin:10px 0 16px}
-.contact p{color:#b9c6d4;max-width:34em;margin:0 0 28px}
-.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:720px}
-.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px}
-.card div{min-width:0}
-.card small{display:block;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:#6ee7b7;margin-bottom:4px}
-.card span{font-size:1.15rem;color:#fff;overflow-wrap:anywhere;user-select:all}
-.copy{flex:none;font:500 .82rem var(--font-body);padding:6px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;cursor:pointer}
-.copy:hover{background:rgba(255,255,255,.1)}
-@media (max-width:640px){.cards{grid-template-columns:1fr}}
+.profile p{margin:0 0 18px;max-width:38em}
+.profile .meta{display:flex;flex-wrap:wrap;gap:10px 28px;margin:26px 0 30px;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--muted);font-size:1rem}
+.profile .meta b{display:block;color:var(--fg);font-weight:600}
+.li-btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;text-decoration:none;color:var(--fg);border:1px solid var(--line);padding:11px 18px;border-radius:2px}
+.li-btn:hover{border-color:var(--green)}
+.li-btn svg{width:18px;height:18px;fill:#0a66c2}
 
-footer{background:var(--navy);color:#8ea0b4;font-size:.9rem;border-top:1px solid rgba(255,255,255,.08)}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:22px}
-footer span{font-variant-numeric:tabular-nums}
+.contact{background:var(--navy);color:var(--on-navy);border-bottom:0}
+.contact .label{color:#6ee7b7}
+.contact h2{color:#fff}
+.contact .lead{color:var(--on-navy-muted)}
+.lines{display:grid;max-width:560px}
+.line{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:16px;border-top:1px solid rgba(255,255,255,.12)}
+.line:last-child{border-bottom:1px solid rgba(255,255,255,.12)}
+.line div{min-width:0}
+.line small{display:block;font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--on-navy-muted)}
+.line span,.line a.val{font-size:1.2rem;color:#fff;overflow-wrap:anywhere;text-decoration:none}
+.line a.val:hover{text-decoration:underline}
+.copy{flex:none;font:600 .85rem var(--font-body);padding:7px 14px;border-radius:2px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;cursor:pointer}
+.copy:hover{border-color:#fff}
+
+footer{background:#0a1020;color:#8796a8;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;padding-block:24px}
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap bar">
-    <a class="brand" href="#top" aria-label="Proficia, naar boven">
+    <a class="brand" href="#top" aria-label="Proficia">
       <svg viewBox="0 0 112 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#0e9f74"/></linearGradient></defs><polygon points="27,22 111,1 86,41 0,63" fill="url(#lg)"/></svg>
       Proficia
     </a>
     <nav aria-label="Hoofdmenu">
       <ul>
-        <li><a href="#diensten">Diensten</a></li>
-        <li><a href="#werkwijze">Werkwijze</a></li>
-        <li><a href="#over">Over</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#aanpak" data-i="nav1">Aanpak</a></li>
+        <li><a href="#toepassingen" data-i="nav2">Toepassingen</a></li>
+        <li><a href="#werkwijze" data-i="nav3">Werkwijze</a></li>
+        <li><a href="#over" data-i="nav4">Over</a></li>
+        <li><a href="#contact" data-i="nav5">Contact</a></li>
       </ul>
+      <div class="lang" role="group" aria-label="Taal / Language">
+        <button type="button" id="btn-nl" data-lang="nl" aria-pressed="true">NL</button>
+        <button type="button" id="btn-en" data-lang="en" aria-pressed="false">EN</button>
+      </div>
     </nav>
   </div>
 </header>
 
 <main id="top">
-  <div class="wrap hero">
-    <div>
-      <div class="eyebrow">AI en automatisering voor bedrijfsprocessen</div>
-      <h1>AI waar het kan, <em>de mens waar het moet.</em></h1>
-      <p class="lede">Proficia maakt, toetst en implementeert AI-toepassingen die het handwerk uit uw processen halen. Uw mensen houden de controle en kijken alleen nog naar de uitzonderingen.</p>
-      <div class="actions">
-        <a class="btn primary" href="#contact">Plan een kennismaking</a>
-        <a class="btn ghost" href="#werkwijze">Zo werk ik</a>
-      </div>
-    </div>
-    <div>
-      <div class="ticket" role="img" aria-label="Voorbeeld van een boekingsvoorstel: facturen uit de mailbox worden automatisch voorbereid, afwijkingen gaan naar een medewerker.">
-        <div class="ticket-head"><span>Boekingsvoorstel · week 44</span><b>inkoop@</b></div>
-        <div class="rows">
-          <div class="row"><span>Vervoerder A · 3 zendingen</span><span>€ 528,40</span><span class="chip">voorgesteld</span></div>
-          <div class="row"><span>Vervoerder B · dieseltoeslag</span><span>€ 61,15</span><span class="chip">voorgesteld</span></div>
-          <div class="row"><span>Vervoerder C · 7 zendingen</span><span>€ 1.204,90</span><span class="chip">voorgesteld</span></div>
-          <div class="row"><span>Onbekende klantcode</span><span>€ 242,06</span><span class="chip mens">naar medewerker</span></div>
+  <div class="intro">
+    <div class="wrap">
+      <div>
+        <div class="label" data-i="eyebrow">Proficia · AI met de mens in de regie</div>
+        <h1><span data-i="h1a" style="color:#fff">AI waar het kan.</span><span data-i="h1b">De mens waar het moet.</span></h1>
+        <p class="lede" data-i="lede">Proficia ontwerpt en implementeert AI-oplossingen die mensen sneller laten zien, beslissen en handelen. Vanuit een helder end-to-end beeld van uw organisatie, met de juiste modellen en tools voor elk vraagstuk.</p>
+        <div class="actions">
+          <a class="btn solid" href="#contact" data-i="cta1">Plan een kennismaking</a>
+          <a class="btn line" href="#toepassingen" data-i="cta2">Bekijk toepassingen</a>
         </div>
-        <div class="ticket-foot"><span>3 klaar om te boeken</span><span>1 vraagt een blik</span></div>
       </div>
-      <div class="caption">Voorbeeld met fictieve bedragen</div>
+      <aside class="focus" aria-labelledby="focus-h">
+        <h2 id="focus-h" data-i="focus">Waar Proficia het verschil maakt</h2>
+        <ul>
+          <li data-i="f1">Logistiek en transport</li>
+          <li data-i="f2">Finance en administratie</li>
+          <li data-i="f3">Operations en klantcontact</li>
+          <li data-i="f4">Verbetertrajecten en projectleiding</li>
+        </ul>
+      </aside>
     </div>
   </div>
 
-  <section id="diensten">
-    <div class="wrap">
-      <div class="section-head">
-        <div><div class="eyebrow">Diensten</div><h2>Van idee tot werkende oplossing</h2></div>
-        <p>Geen rapport dat in een la belandt. Ik bouw iets dat werkt, test het naast uw huidige werkwijze en draag het over aan uw team.</p>
+  <section id="aanpak">
+    <div class="wrap split">
+      <div><div class="label" data-i="a-label">Aanpak</div><h2 data-i="a-h">Technologie volgt het doel</h2></div>
+      <div>
+        <p class="lead" data-i="a-lead">Er is niet één manier om tot het resultaat te komen. Daarom begint elke opdracht bij de vraag waar uw organisatie naartoe wil, en pas daarna bij de techniek.</p>
+        <div class="principles">
+          <div class="principle"><h3 data-i="p1h">De mens in de regie</h3><p data-i="p1">AI doet het voorwerk; uw medewerkers beoordelen, beslissen en houden het overzicht. Human in the loop, by design.</p></div>
+          <div class="principle"><h3 data-i="p2h">Eerst begrijpen waar het heen moet</h3><p data-i="p2">Doel, proces en uitzonderingen zijn helder voordat er iets wordt gebouwd.</p></div>
+          <div class="principle"><h3 data-i="p3h">End-to-end overzicht</h3><p data-i="p3">Van order tot factuur en van mailbox tot klant: de hele keten in beeld, niet één los onderdeel.</p></div>
+          <div class="principle"><h3 data-i="p4h">Het juiste model voor elke taak</h3><p data-i="p4">Verschillende modellen en tools, gekozen op wat werkt, wat het kost en wat uw organisatie aankan.</p></div>
+        </div>
       </div>
-      <div class="services">
-        <div class="service">
-          <h3>Bouwen</h3>
-          <p>AI-toepassingen en automatiseringen die terugkerend werk overnemen.</p>
-          <ul><li>Facturen en documenten uitlezen</li><li>Boekings- en verwerkingsvoorstellen</li><li>Controles op facturatie en data</li></ul>
+    </div>
+  </section>
+
+  <section id="toepassingen">
+    <div class="wrap split">
+      <div><div class="label" data-i="t-label">Toepassingen</div><h2 data-i="t-h">Wat dat in de praktijk oplevert</h2></div>
+      <div>
+        <div class="feature">
+          <div class="label" data-i="ft-label">Uitgelicht</div>
+          <h3 data-i="ft-h">Een interne AI-collega</h3>
+          <p data-i="ft-p">Een AI-assistent die werkt met de data binnen uw eigen organisatie. Collega's stellen een vraag in gewone taal en krijgen een onderbouwd antwoord uit uw eigen systemen.</p>
+          <ul>
+            <li data-i="ft1">Sneller inzicht in orders, klanten en cijfers</li>
+            <li data-i="ft2">Beslissingen beter onderbouwen</li>
+            <li data-i="ft3">Overleggen en gesprekken voorbereiden</li>
+            <li data-i="ft4">Klanten proactief informeren</li>
+            <li data-i="ft5">Kansen zien voordat de klant erom vraagt</li>
+            <li data-i="ft6">Problemen signaleren voordat ze ontstaan</li>
+          </ul>
         </div>
-        <div class="service">
-          <h3>Toetsen en invoeren</h3>
-          <p>Eerst bewijzen dat het werkt, dan pas overstappen.</p>
-          <ul><li>Proef naast de huidige werkwijze</li><li>Duidelijke criteria voor go of no-go</li><li>Afspraken over controle en uitzonderingen</li></ul>
-        </div>
-        <div class="service">
-          <h3>Projectleiding</h3>
-          <p>Verbetertrajecten in finance en operations, met de mensen die het werk doen.</p>
-          <ul><li>Processen vastleggen en kennis borgen</li><li>Prioriteren op wat het meeste oplevert</li><li>Werkgroep en stuurgroep begeleiden</li></ul>
+        <div class="cases">
+          <div class="case"><h3 data-i="c1h">Documenten en facturen</h3><p data-i="c1">Facturen uit de mailbox uitlezen en omzetten in een voorstel dat een medewerker controleert en boekt.</p></div>
+          <div class="case"><h3 data-i="c2h">Mailbox en verzoeken</h3><p data-i="c2">Inzicht in wat er binnenkomt, en berichten automatisch bij de juiste persoon of het juiste proces.</p></div>
+          <div class="case"><h3 data-i="c3h">Controles en afwijkingen</h3><p data-i="c3">Gegevens uit verschillende systemen koppelen, zodat afwijkingen opvallen en de rest vanzelf loopt.</p></div>
         </div>
       </div>
     </div>
   </section>
 
   <section id="werkwijze">
-    <div class="wrap">
-      <div class="section-head">
-        <div><div class="eyebrow">Werkwijze</div><h2>Klein beginnen, aantoonbaar opleveren</h2></div>
-        <p>Elke automatisering doorloopt dezelfde vier stappen. Zo weet u steeds waar u staat en wat het oplevert.</p>
+    <div class="wrap split">
+      <div><div class="label" data-i="w-label">Werkwijze</div><h2 data-i="w-h">Klein beginnen, aantoonbaar opleveren</h2></div>
+      <div>
+        <p class="lead" data-i="w-lead">Elke oplossing doorloopt dezelfde vier stappen. U weet steeds waar u staat en wat het oplevert.</p>
+        <ol class="steps">
+          <li data-step="Stap"><h3 data-i="s1h">Begrijpen</h3><p data-i="s1">Het proces vastleggen zoals het werkelijk loopt, inclusief de uitzonderingen. Die kennis blijft in uw organisatie.</p></li>
+          <li data-step="Stap"><h3 data-i="s2h">Klein beginnen</h3><p data-i="s2">Eén stroom kiezen met veel handwerk en een duidelijke winst, en daar een eerste versie voor bouwen.</p></li>
+          <li data-step="Stap"><h3 data-i="s3h">Naast elkaar draaien</h3><p data-i="s3">De oplossing draait mee met de huidige werkwijze, tot de uitkomst weken achter elkaar klopt.</p></li>
+          <li data-step="Stap"><h3 data-i="s4h">Overdragen</h3><p data-i="s4">Uw team neemt het over, met een werkbeschrijving en een vaste plek voor de uitzonderingen.</p></li>
+        </ol>
       </div>
-      <ol class="steps">
-        <li><h3>Begrijpen</h3><p>We leggen het proces vast zoals het nu loopt, met de uitzonderingen. Dat is meteen kennis die blijft.</p></li>
-        <li><h3>Klein beginnen</h3><p>We kiezen één stroom met veel handwerk en een duidelijke winst, en bouwen daar een eerste versie voor.</p></li>
-        <li><h3>Naast elkaar draaien</h3><p>De oplossing draait mee met de huidige werkwijze, tot de uitkomst weken achter elkaar klopt.</p></li>
-        <li><h3>Overdragen</h3><p>Uw team neemt het over, met een werkbeschrijving en een vaste plek voor de uitzonderingen.</p></li>
-      </ol>
     </div>
   </section>
 
   <section id="over">
-    <div class="wrap about">
-      <div><div class="eyebrow">Over Proficia</div><h2 style="font-size:clamp(1.9rem,3.4vw,2.6rem);margin-top:10px">Erik van Setten</h2></div>
-      <div class="body">
-        <p>Proficia is het bedrijf van Erik van Setten. Hij heeft een achtergrond in operations, transport, supply chain en business transformation, en werkte als bedrijfsleider, trainer, product owner en in management- en directiefuncties.</p>
-        <p>Die combinatie bepaalt de aanpak: eerst begrijpen hoe het werk echt gaat, dan pas automatiseren. Direct, eerlijk en gericht op iets dat werkt.</p>
-        <ul class="facts"><li>Logistiek en transport</li><li>Finance en operations</li><li>AI en automatisering</li><li>Gevestigd in Ede</li></ul>
+    <div class="wrap split">
+      <div><div class="label" data-i="o-label">Over Proficia</div><h2>Erik van Setten</h2></div>
+      <div class="profile">
+        <p data-i="o1">Proficia is de praktijk van Erik van Setten. Hij werkte als bedrijfsleider, trainer, product owner en in management- en directiefuncties, met een achtergrond in operations, transport, supply chain en business transformation.</p>
+        <p data-i="o2">Die ervaring bepaalt de aanpak: eerst begrijpen hoe het werk echt gaat en waar het naartoe moet, dan pas automatiseren. Direct, eerlijk en gericht op een oplossing die werkt.</p>
+        <div class="meta">
+          <div><b data-i="m1h">Achtergrond</b><span data-i="m1">Operations, transport en supply chain</span></div>
+          <div><b data-i="m2h">Specialisatie</b><span data-i="m2">AI en procesautomatisering</span></div>
+          <div><b data-i="m3h">Vestiging</b>Ede</div>
+        </div>
+        <a class="li-btn" href="https://www.linkedin.com/in/erik-van-setten-a02b2547/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          <span data-i="li">Bekijk profiel op LinkedIn</span>
+        </a>
       </div>
     </div>
   </section>
 
   <section class="contact" id="contact">
-    <div class="wrap">
-      <div class="eyebrow">Contact</div>
-      <h2>Zullen we kijken waar de winst zit?</h2>
-      <p>Bel of mail voor een kennismaking. In een uur weten we of er een stroom is die zich leent voor een eerste automatisering.</p>
-      <div class="cards">
-        <div class="card"><div><small>Telefoon</small><span id="tel">06 14 38 02 05</span></div><button class="copy" type="button" data-copy="tel">Kopieer</button></div>
-        <div class="card"><div><small>E-mail</small><span id="mail">evansetten@proficia.nl</span></div><button class="copy" type="button" data-copy="mail">Kopieer</button></div>
+    <div class="wrap split">
+      <div><div class="label">Contact</div><h2 data-i="k-h">Kennismaken</h2></div>
+      <div>
+        <p class="lead" data-i="k-lead">Bel of mail voor een eerste gesprek. Binnen een uur weet u waar AI in uw organisatie het meeste kan opleveren.</p>
+        <div class="lines">
+          <div class="line"><div><small data-i="k1">Telefoon</small><span id="tel">06 14 38 02 05</span></div><button class="copy" type="button" data-copy="tel" data-i="copy">Kopieer</button></div>
+          <div class="line"><div><small>E-mail</small><span id="mail">evansetten@proficia.nl</span></div><button class="copy" type="button" data-copy="mail" data-i="copy">Kopieer</button></div>
+          <div class="line"><div><small>LinkedIn</small><a class="val" href="https://www.linkedin.com/in/erik-van-setten-a02b2547/" target="_blank" rel="noopener">Erik van Setten</a></div></div>
+        </div>
       </div>
     </div>
   </section>
@@ -263,18 +284,71 @@ footer span{font-variant-numeric:tabular-nums}
 <footer>
   <div class="wrap">
     <span>Proficia · Erik van Setten · Ede</span>
-    <span>KvK 42189233 · btw NL005570911B10</span>
+    <span data-i="foot">KvK 42189233 · btw NL005570911B10</span>
   </div>
 </footer>
 
 <script>
+var EN = {
+  nav1:"Approach", nav2:"Use cases", nav3:"How I work", nav4:"About", nav5:"Contact",
+  eyebrow:"Proficia · AI with people in control",
+  h1a:"AI where it can.", h1b:"People where they must.",
+  lede:"Proficia designs and implements AI solutions that help people see, decide and act faster. Built on a clear end-to-end view of your organisation, with the right models and tools for each challenge.",
+  cta1:"Schedule an introduction", cta2:"View use cases",
+  focus:"Where Proficia makes the difference",
+  f1:"Logistics and transport", f2:"Finance and administration", f3:"Operations and customer service", f4:"Improvement programmes and project leadership",
+  "a-label":"Approach", "a-h":"Technology follows the goal",
+  "a-lead":"There is no single way to get to the result. That is why every assignment starts with where your organisation wants to go, and only then with the technology.",
+  p1h:"People in control", p1:"AI does the groundwork; your people review, decide and keep the overview. Human in the loop, by design.",
+  p2h:"Understand the destination first", p2:"Goal, process and exceptions are clear before anything gets built.",
+  p3h:"End-to-end overview", p3:"From order to invoice and from inbox to customer: the whole chain in view, not one isolated part.",
+  p4h:"The right model for each task", p4:"Different models and tools, chosen for what works, what it costs and what your organisation can handle.",
+  "t-label":"Use cases", "t-h":"What it delivers in practice",
+  "ft-label":"Featured", "ft-h":"An internal AI colleague",
+  "ft-p":"An AI assistant that works with the data inside your own organisation. Colleagues ask a question in plain language and get a well-founded answer from your own systems.",
+  ft1:"Faster insight into orders, customers and figures", ft2:"Better-founded decisions", ft3:"Preparing meetings and conversations", ft4:"Informing customers proactively", ft5:"Spotting opportunities before the customer asks", ft6:"Flagging problems before they occur",
+  c1h:"Documents and invoices", c1:"Reading invoices from the inbox and turning them into a proposal that an employee checks and books.",
+  c2h:"Inbox and requests", c2:"Insight into what comes in, with messages routed automatically to the right person or process.",
+  c3h:"Checks and exceptions", c3:"Connecting data from different systems, so exceptions stand out and the rest runs by itself.",
+  "w-label":"How I work", "w-h":"Start small, deliver proof",
+  "w-lead":"Every solution goes through the same four steps. You always know where you stand and what it delivers.",
+  s1h:"Understand", s1:"Capture the process as it really runs, including the exceptions. That knowledge stays in your organisation.",
+  s2h:"Start small", s2:"Choose one stream with a lot of manual work and a clear gain, and build a first version for it.",
+  s3h:"Run side by side", s3:"The solution runs alongside the current way of working until the outcome is right week after week.",
+  s4h:"Hand over", s4:"Your team takes over, with a work instruction and a fixed place for the exceptions.",
+  "o-label":"About Proficia",
+  o1:"Proficia is the practice of Erik van Setten. He has worked as a branch manager, trainer, product owner and in management and executive roles, with a background in operations, transport, supply chain and business transformation.",
+  o2:"That experience shapes the approach: first understand how the work really happens and where it needs to go, then automate. Direct, honest and focused on a solution that works.",
+  m1h:"Background", m1:"Operations, transport and supply chain", m2h:"Specialisation", m2:"AI and process automation", m3h:"Based in",
+  li:"View profile on LinkedIn",
+  "k-h":"Get acquainted", "k-lead":"Call or email for a first conversation. Within an hour you will know where AI can deliver the most in your organisation.",
+  k1:"Phone", copy:"Copy",
+  foot:"Chamber of Commerce 42189233 · VAT NL005570911B10"
+};
+var NL = {};
+document.querySelectorAll('[data-i]').forEach(function(el){ NL[el.dataset.i] = el.textContent; });
+function setLang(l){
+  var dict = l === 'en' ? EN : NL;
+  document.querySelectorAll('[data-i]').forEach(function(el){ var v = dict[el.dataset.i]; if (v) el.textContent = v; });
+  document.querySelectorAll('.steps li').forEach(function(li){ li.dataset.step = l === 'en' ? 'Step' : 'Stap'; });
+  document.documentElement.lang = l;
+  document.getElementById('btn-nl').setAttribute('aria-pressed', l === 'nl');
+  document.getElementById('btn-en').setAttribute('aria-pressed', l === 'en');
+  try { localStorage.setItem('proficia-lang', l); } catch(e){}
+}
+document.querySelectorAll('.lang button').forEach(function(b){
+  b.addEventListener('click', function(){ setLang(b.dataset.lang); if (b.dataset.lang === 'en') { history.replaceState(null, '', '#en'); } else if (location.hash === '#en') { history.replaceState(null, '', location.pathname); } });
+});
+var start = 'nl';
+try { start = localStorage.getItem('proficia-lang') || 'nl'; } catch(e){}
+if (location.hash === '#en') start = 'en';
+if (start === 'en') setLang('en');
+
 document.querySelectorAll('.copy').forEach(function(b){
   b.addEventListener('click', function(){
-    var el = document.getElementById(b.dataset.copy), t = el.textContent;
-    function done(){ b.textContent = 'Gekopieerd'; setTimeout(function(){ b.textContent = 'Kopieer'; }, 1600); }
-    try {
-      navigator.clipboard.writeText(t).then(done, function(){ sel(el); });
-    } catch(e){ sel(el); }
+    var el = document.getElementById(b.dataset.copy), t = el.textContent, orig = b.textContent;
+    function done(){ b.textContent = document.documentElement.lang === 'en' ? 'Copied' : 'Gekopieerd'; setTimeout(function(){ b.textContent = orig; }, 1600); }
+    try { navigator.clipboard.writeText(t).then(done, function(){ sel(el); }); } catch(e){ sel(el); }
   });
 });
 function sel(el){ var r=document.createRange(); r.selectNodeContents(el); var s=getSelection(); s.removeAllRanges(); s.addRange(r); }
