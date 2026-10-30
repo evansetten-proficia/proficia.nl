@@ -4,15 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Proficia</title>
-<meta name="description" content="Proficia ontwerpt en implementeert AI-oplossingen met de mens in de regie. AI waar het kan, de mens waar het moet.">
+<meta name="description" content="Proficia helpt organisaties AI zo in te zetten dat mensen er sneller en beter door werken. AI waar het kan, de mens waar het moet.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Source+Sans+3:wght@400;600&display=swap">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta property="og:title" content="Proficia">
-<meta property="og:description" content="AI waar het kan, de mens waar het moet. Proficia ontwerpt en implementeert AI-oplossingen met de mens in de regie.">
+<meta property="og:description" content="AI waar het kan, de mens waar het moet. Proficia helpt organisaties AI zo in te zetten dat mensen er sneller en beter door werken.">
 <meta property="og:url" content="https://proficia.nl/">
-<link rel="alternate" hreflang="nl" href="https://proficia.nl/">
 <style>
 /* Layout: ingetogen adviespraktijk. Navy openingsband, daarna kop links / inhoud rechts met dunne lijnen; één uitgelichte toepassing; groen alleen als accent. */
 :root{
@@ -141,20 +140,30 @@ section{padding-block:84px;border-bottom:1px solid var(--line)}
 
 footer{background:#0a1020;color:#8796a8;font-size:.92rem}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;padding-block:24px}
+
+
+.focus li b{display:block;color:#fff;font-weight:600}
+.focus li span{color:var(--on-navy-muted);font-size:.98rem}
+.case-big{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:20px}
+.case-big div{min-width:0}
+.case-big h4{margin:0 0 6px;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green-ink)}
+.case-big p{margin:0;font-size:1.02rem;color:var(--fg)}
+@media (max-width:720px){.case-big{grid-template-columns:1fr;gap:16px}}
+.quote{font-family:var(--font-display);font-size:1.3rem;line-height:1.45;border-left:3px solid var(--green);padding-left:22px;margin:0 0 26px;max-width:34em}
+
 </style>
 </head>
 <body>
-
 <header>
   <div class="wrap bar">
     <a class="brand" href="#top" aria-label="Proficia">
       <svg viewBox="0 0 112 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#0e9f74"/></linearGradient></defs><polygon points="27,22 111,1 86,41 0,63" fill="url(#lg)"/></svg>
       Proficia
     </a>
-    <nav aria-label="Hoofdmenu">
+    <nav aria-label="Menu">
       <ul>
         <li><a href="#aanpak" data-i="nav1">Aanpak</a></li>
-        <li><a href="#toepassingen" data-i="nav2">Toepassingen</a></li>
+        <li><a href="#praktijk" data-i="nav2">Uit de praktijk</a></li>
         <li><a href="#werkwijze" data-i="nav3">Werkwijze</a></li>
         <li><a href="#over" data-i="nav4">Over</a></li>
         <li><a href="#contact" data-i="nav5">Contact</a></li>
@@ -171,21 +180,21 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
   <div class="intro">
     <div class="wrap">
       <div>
-        <div class="label" data-i="eyebrow">Proficia · AI met de mens in de regie</div>
-        <h1><span data-i="h1a" style="color:#fff">AI waar het kan.</span><span data-i="h1b">De mens waar het moet.</span></h1>
-        <p class="lede" data-i="lede">Proficia ontwerpt en implementeert AI-oplossingen die mensen sneller laten zien, beslissen en handelen. Vanuit een helder end-to-end beeld van uw organisatie, met de juiste modellen en tools voor elk vraagstuk.</p>
+        <div class="label" data-i="eyebrow">Proficia · AI-advies en implementatie</div>
+        <h1><span style="color:#fff" data-i="h1a">AI waar het kan.</span><span data-i="h1b">De mens waar het moet.</span></h1>
+        <p class="lede" data-i="lede">Ik help organisaties AI zo in te zetten dat mensen er sneller en beter door werken. Van een helder end-to-end beeld tot een oplossing die in de praktijk werkt en die je team zelf kan dragen.</p>
         <div class="actions">
           <a class="btn solid" href="#contact" data-i="cta1">Plan een kennismaking</a>
-          <a class="btn line" href="#toepassingen" data-i="cta2">Bekijk toepassingen</a>
+          <a class="btn line" href="#praktijk" data-i="cta2">Bekijk voorbeelden</a>
         </div>
       </div>
       <aside class="focus" aria-labelledby="focus-h">
-        <h2 id="focus-h" data-i="focus">Waar Proficia het verschil maakt</h2>
+        <h2 id="focus-h" data-i="focus">Wat je van mij kunt verwachten</h2>
         <ul>
-          <li data-i="f1">Logistiek en transport</li>
-          <li data-i="f2">Finance en administratie</li>
-          <li data-i="f3">Operations en klantcontact</li>
-          <li data-i="f4">Verbetertrajecten en projectleiding</li>
+          <li><b data-i="e1h">Overzicht</b><span data-i="e1">De hele keten in beeld voordat er iets wordt gebouwd</span></li>
+          <li><b data-i="e2h">Een werkende oplossing</b><span data-i="e2">Geen rapport, maar iets dat in de praktijk draait</span></li>
+          <li><b data-i="e3h">Mensen in de regie</b><span data-i="e3">AI doet het voorwerk, je team beslist</span></li>
+          <li><b data-i="e4h">Kennis die blijft</b><span data-i="e4">Vastgelegd en overgedragen aan je eigen mensen</span></li>
         </ul>
       </aside>
     </div>
@@ -195,36 +204,32 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
     <div class="wrap split">
       <div><div class="label" data-i="a-label">Aanpak</div><h2 data-i="a-h">Technologie volgt het doel</h2></div>
       <div>
-        <p class="lead" data-i="a-lead">Er is niet één manier om tot het resultaat te komen. Daarom begint elke opdracht bij de vraag waar uw organisatie naartoe wil, en pas daarna bij de techniek.</p>
+        <p class="lead" data-i="a-lead">Er is niet één manier om tot het resultaat te komen, en elke organisatie is anders. Daarom begint elke opdracht bij de vraag waar je naartoe wilt, en pas daarna bij de techniek.</p>
         <div class="principles">
-          <div class="principle"><h3 data-i="p1h">De mens in de regie</h3><p data-i="p1">AI doet het voorwerk; uw medewerkers beoordelen, beslissen en houden het overzicht. Human in the loop, by design.</p></div>
+          <div class="principle"><h3 data-i="p1h">De mens in de regie</h3><p data-i="p1">AI doet het voorwerk; mensen beoordelen, beslissen en houden het overzicht. Human in the loop, vanaf het ontwerp.</p></div>
           <div class="principle"><h3 data-i="p2h">Eerst begrijpen waar het heen moet</h3><p data-i="p2">Doel, proces en uitzonderingen zijn helder voordat er iets wordt gebouwd.</p></div>
-          <div class="principle"><h3 data-i="p3h">End-to-end overzicht</h3><p data-i="p3">Van order tot factuur en van mailbox tot klant: de hele keten in beeld, niet één los onderdeel.</p></div>
-          <div class="principle"><h3 data-i="p4h">Het juiste model voor elke taak</h3><p data-i="p4">Verschillende modellen en tools, gekozen op wat werkt, wat het kost en wat uw organisatie aankan.</p></div>
+          <div class="principle"><h3 data-i="p3h">End-to-end overzicht</h3><p data-i="p3">De hele keten in beeld, van eerste contact tot afronding. Niet één los onderdeel optimaliseren ten koste van de rest.</p></div>
+          <div class="principle"><h3 data-i="p4h">Het juiste model voor elke taak</h3><p data-i="p4">Verschillende modellen en tools, gekozen op wat werkt, wat het kost en wat je organisatie aankan.</p></div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="toepassingen">
+  <section id="praktijk">
     <div class="wrap split">
-      <div><div class="label" data-i="t-label">Toepassingen</div><h2 data-i="t-h">Wat dat in de praktijk oplevert</h2></div>
+      <div><div class="label" data-i="t-label">Uit de praktijk</div><h2 data-i="t-h">Wat het oplevert</h2></div>
       <div>
         <div class="feature">
           <div class="label" data-i="ft-label">Uitgelicht</div>
           <h3 data-i="ft-h">Een interne AI-collega</h3>
-          <p data-i="ft-p">Een AI-assistent die werkt met de data binnen uw eigen organisatie. Collega's stellen een vraag in gewone taal en krijgen een onderbouwd antwoord uit uw eigen systemen.</p>
-          <ul>
-            <li data-i="ft1">Sneller inzicht in orders, klanten en cijfers</li>
-            <li data-i="ft2">Beslissingen beter onderbouwen</li>
-            <li data-i="ft3">Overleggen en gesprekken voorbereiden</li>
-            <li data-i="ft4">Klanten proactief informeren</li>
-            <li data-i="ft5">Kansen zien voordat de klant erom vraagt</li>
-            <li data-i="ft6">Problemen signaleren voordat ze ontstaan</li>
-          </ul>
+          <div class="case-big">
+            <div><h4 data-i="cv-h">Vraag</h4><p data-i="cv">Medewerkers zochten informatie bij elkaar uit verschillende systemen. Dat kostte tijd en hing af van wie wat wist.</p></div>
+            <div><h4 data-i="ca-h">Aanpak</h4><p data-i="ca">Een AI-assistent die werkt met de eigen data van de organisatie. Collega's stellen een vraag in gewone taal en krijgen een onderbouwd antwoord.</p></div>
+            <div><h4 data-i="cr-h">Resultaat</h4><p data-i="cr">Sneller inzicht, beter voorbereide gesprekken, en klanten die proactief worden geïnformeerd. Kansen en problemen komen eerder in beeld.</p></div>
+          </div>
         </div>
         <div class="cases">
-          <div class="case"><h3 data-i="c1h">Documenten en facturen</h3><p data-i="c1">Facturen uit de mailbox uitlezen en omzetten in een voorstel dat een medewerker controleert en boekt.</p></div>
+          <div class="case"><h3 data-i="c1h">Documenten en facturen</h3><p data-i="c1">Facturen uit de mailbox uitlezen en omzetten in een voorstel dat een medewerker controleert en verwerkt.</p></div>
           <div class="case"><h3 data-i="c2h">Mailbox en verzoeken</h3><p data-i="c2">Inzicht in wat er binnenkomt, en berichten automatisch bij de juiste persoon of het juiste proces.</p></div>
           <div class="case"><h3 data-i="c3h">Controles en afwijkingen</h3><p data-i="c3">Gegevens uit verschillende systemen koppelen, zodat afwijkingen opvallen en de rest vanzelf loopt.</p></div>
         </div>
@@ -236,12 +241,12 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
     <div class="wrap split">
       <div><div class="label" data-i="w-label">Werkwijze</div><h2 data-i="w-h">Klein beginnen, aantoonbaar opleveren</h2></div>
       <div>
-        <p class="lead" data-i="w-lead">Elke oplossing doorloopt dezelfde vier stappen. U weet steeds waar u staat en wat het oplevert.</p>
+        <p class="lead" data-i="w-lead">Elke oplossing doorloopt dezelfde vier stappen. Zo weet je steeds waar je staat en wat het oplevert.</p>
         <ol class="steps">
-          <li data-step="Stap"><h3 data-i="s1h">Begrijpen</h3><p data-i="s1">Het proces vastleggen zoals het werkelijk loopt, inclusief de uitzonderingen. Die kennis blijft in uw organisatie.</p></li>
-          <li data-step="Stap"><h3 data-i="s2h">Klein beginnen</h3><p data-i="s2">Eén stroom kiezen met veel handwerk en een duidelijke winst, en daar een eerste versie voor bouwen.</p></li>
+          <li data-step="Stap"><h3 data-i="s1h">Begrijpen</h3><p data-i="s1">Het proces vastleggen zoals het werkelijk loopt, inclusief de uitzonderingen. Die kennis blijft in je organisatie.</p></li>
+          <li data-step="Stap"><h3 data-i="s2h">Klein beginnen</h3><p data-i="s2">Eén proces kiezen met veel handwerk en een duidelijke winst, en daar een eerste versie voor bouwen.</p></li>
           <li data-step="Stap"><h3 data-i="s3h">Naast elkaar draaien</h3><p data-i="s3">De oplossing draait mee met de huidige werkwijze, tot de uitkomst weken achter elkaar klopt.</p></li>
-          <li data-step="Stap"><h3 data-i="s4h">Overdragen</h3><p data-i="s4">Uw team neemt het over, met een werkbeschrijving en een vaste plek voor de uitzonderingen.</p></li>
+          <li data-step="Stap"><h3 data-i="s4h">Overdragen</h3><p data-i="s4">Je team neemt het over, met een werkbeschrijving en een vaste plek voor de uitzonderingen.</p></li>
         </ol>
       </div>
     </div>
@@ -251,29 +256,27 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
     <div class="wrap split">
       <div><div class="label" data-i="o-label">Over Proficia</div><h2>Erik van Setten</h2></div>
       <div class="profile">
-        <p data-i="o1">Proficia is de praktijk van Erik van Setten. Hij werkte als bedrijfsleider, trainer, product owner en in management- en directiefuncties, met een achtergrond in operations, transport, supply chain en business transformation.</p>
-        <p data-i="o2">Die ervaring bepaalt de aanpak: eerst begrijpen hoe het werk echt gaat en waar het naartoe moet, dan pas automatiseren. Direct, eerlijk en gericht op een oplossing die werkt.</p>
+        <p class="quote" data-i="oq">“De meeste winst zit niet in de slimste technologie, maar in begrijpen hoe het werk echt gaat.”</p>
+        <p data-i="o1">Proficia is mijn praktijk. Ik werkte als bedrijfsleider, trainer, product owner en in management- en directiefuncties, met een achtergrond in operations, supply chain en business transformation. Ik ken het werk dus van de vloer tot de directietafel.</p>
+        <p data-i="o2">Die ervaring neem ik mee in elke opdracht: luisteren, de keten overzien en samen met de mensen die het werk doen tot een oplossing komen die blijft werken. Direct en eerlijk, ook als dat betekent dat AI ergens niet de beste keuze is.</p>
         <div class="meta">
-          <div><b data-i="m1h">Achtergrond</b><span data-i="m1">Operations, transport en supply chain</span></div>
-          <div><b data-i="m2h">Specialisatie</b><span data-i="m2">AI en procesautomatisering</span></div>
+          <div><b data-i="m1h">Ervaring</b><span data-i="m1">Management, operations en transformatie</span></div>
+          <div><b data-i="m2h">Specialisatie</b><span data-i="m2">AI-advies en implementatie</span></div>
           <div><b data-i="m3h">Vestiging</b>Ede</div>
         </div>
-        <a class="li-btn" href="https://www.linkedin.com/in/erik-van-setten-a02b2547/" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
-          <span data-i="li">Bekijk profiel op LinkedIn</span>
-        </a>
+        <a class="li-btn" href="https://www.linkedin.com/in/erik-van-setten-a02b2547/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span data-i="li">Bekijk mijn profiel op LinkedIn</span></a>
       </div>
     </div>
   </section>
 
   <section class="contact" id="contact">
     <div class="wrap split">
-      <div><div class="label">Contact</div><h2 data-i="k-h">Kennismaken</h2></div>
+      <div><div class="label">Contact</div><h2 data-i="k-h">Laten we kennismaken</h2></div>
       <div>
-        <p class="lead" data-i="k-lead">Bel of mail voor een eerste gesprek. Binnen een uur weet u waar AI in uw organisatie het meeste kan opleveren.</p>
+        <p class="lead" data-i="k-lead">Bel of mail voor een eerste gesprek, vrijblijvend. In een uur weet je waar AI in jouw organisatie het meeste kan opleveren, en waar juist niet.</p>
         <div class="lines">
-          <div class="line"><div><small data-i="k1">Telefoon</small><span id="tel">06 14 38 02 05</span></div><button class="copy" type="button" data-copy="tel" data-i="copy">Kopieer</button></div>
-          <div class="line"><div><small>E-mail</small><span id="mail">evansetten@proficia.nl</span></div><button class="copy" type="button" data-copy="mail" data-i="copy">Kopieer</button></div>
+          <div class="line"><div><small data-i="k1">Telefoon</small><span id="tel">06 14 38 02 05</span></div><button class="copy" type="button" data-copy="tel" data-i="copy1">Kopieer</button></div>
+          <div class="line"><div><small>E-mail</small><span id="mail">evansetten@proficia.nl</span></div><button class="copy" type="button" data-copy="mail" data-i="copy2">Kopieer</button></div>
           <div class="line"><div><small>LinkedIn</small><a class="val" href="https://www.linkedin.com/in/erik-van-setten-a02b2547/" target="_blank" rel="noopener">Erik van Setten</a></div></div>
         </div>
       </div>
@@ -289,47 +292,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 
 </footer>
 
 <script>
-var EN = {
-  nav1:"Approach", nav2:"Use cases", nav3:"How I work", nav4:"About", nav5:"Contact",
-  eyebrow:"Proficia · AI with people in control",
-  h1a:"AI where it can.", h1b:"People where they must.",
-  lede:"Proficia designs and implements AI solutions that help people see, decide and act faster. Built on a clear end-to-end view of your organisation, with the right models and tools for each challenge.",
-  cta1:"Schedule an introduction", cta2:"View use cases",
-  focus:"Where Proficia makes the difference",
-  f1:"Logistics and transport", f2:"Finance and administration", f3:"Operations and customer service", f4:"Improvement programmes and project leadership",
-  "a-label":"Approach", "a-h":"Technology follows the goal",
-  "a-lead":"There is no single way to get to the result. That is why every assignment starts with where your organisation wants to go, and only then with the technology.",
-  p1h:"People in control", p1:"AI does the groundwork; your people review, decide and keep the overview. Human in the loop, by design.",
-  p2h:"Understand the destination first", p2:"Goal, process and exceptions are clear before anything gets built.",
-  p3h:"End-to-end overview", p3:"From order to invoice and from inbox to customer: the whole chain in view, not one isolated part.",
-  p4h:"The right model for each task", p4:"Different models and tools, chosen for what works, what it costs and what your organisation can handle.",
-  "t-label":"Use cases", "t-h":"What it delivers in practice",
-  "ft-label":"Featured", "ft-h":"An internal AI colleague",
-  "ft-p":"An AI assistant that works with the data inside your own organisation. Colleagues ask a question in plain language and get a well-founded answer from your own systems.",
-  ft1:"Faster insight into orders, customers and figures", ft2:"Better-founded decisions", ft3:"Preparing meetings and conversations", ft4:"Informing customers proactively", ft5:"Spotting opportunities before the customer asks", ft6:"Flagging problems before they occur",
-  c1h:"Documents and invoices", c1:"Reading invoices from the inbox and turning them into a proposal that an employee checks and books.",
-  c2h:"Inbox and requests", c2:"Insight into what comes in, with messages routed automatically to the right person or process.",
-  c3h:"Checks and exceptions", c3:"Connecting data from different systems, so exceptions stand out and the rest runs by itself.",
-  "w-label":"How I work", "w-h":"Start small, deliver proof",
-  "w-lead":"Every solution goes through the same four steps. You always know where you stand and what it delivers.",
-  s1h:"Understand", s1:"Capture the process as it really runs, including the exceptions. That knowledge stays in your organisation.",
-  s2h:"Start small", s2:"Choose one stream with a lot of manual work and a clear gain, and build a first version for it.",
-  s3h:"Run side by side", s3:"The solution runs alongside the current way of working until the outcome is right week after week.",
-  s4h:"Hand over", s4:"Your team takes over, with a work instruction and a fixed place for the exceptions.",
-  "o-label":"About Proficia",
-  o1:"Proficia is the practice of Erik van Setten. He has worked as a branch manager, trainer, product owner and in management and executive roles, with a background in operations, transport, supply chain and business transformation.",
-  o2:"That experience shapes the approach: first understand how the work really happens and where it needs to go, then automate. Direct, honest and focused on a solution that works.",
-  m1h:"Background", m1:"Operations, transport and supply chain", m2h:"Specialisation", m2:"AI and process automation", m3h:"Based in",
-  li:"View profile on LinkedIn",
-  "k-h":"Get acquainted", "k-lead":"Call or email for a first conversation. Within an hour you will know where AI can deliver the most in your organisation.",
-  k1:"Phone", copy:"Copy",
-  foot:"Chamber of Commerce 42189233 · VAT NL005570911B10"
-};
-var NL = {};
-document.querySelectorAll('[data-i]').forEach(function(el){ NL[el.dataset.i] = el.textContent; });
+var EN = {"nav1": "Approach", "nav2": "In practice", "nav3": "How I work", "nav4": "About", "nav5": "Contact", "eyebrow": "Proficia · AI advisory and implementation", "h1a": "AI where it can.", "h1b": "People where they must.", "lede": "I help organisations use AI so that people work faster and better. From a clear end-to-end picture to a solution that works in practice and that your team can own.", "cta1": "Schedule an introduction", "cta2": "See examples", "focus": "What you can expect", "e1h": "Overview", "e1": "The whole chain in view before anything gets built", "e2h": "A working solution", "e2": "Not a report, but something that runs in practice", "e3h": "People in control", "e3": "AI does the groundwork, your team decides", "e4h": "Knowledge that stays", "e4": "Documented and handed over to your own people", "a-label": "Approach", "a-h": "Technology follows the goal", "a-lead": "There is no single way to the result, and every organisation is different. That is why every assignment starts with where you want to go, and only then with the technology.", "p1h": "People in control", "p1": "AI does the groundwork; people review, decide and keep the overview. Human in the loop, by design.", "p2h": "Understand the destination first", "p2": "Goal, process and exceptions are clear before anything gets built.", "p3h": "End-to-end overview", "p3": "The whole chain in view, from first contact to completion. Not optimising one part at the expense of the rest.", "p4h": "The right model for each task", "p4": "Different models and tools, chosen for what works, what it costs and what your organisation can handle.", "t-label": "In practice", "t-h": "What it delivers", "ft-label": "Featured", "ft-h": "An internal AI colleague", "cv-h": "Question", "cv": "Employees gathered information from several systems. It took time and depended on who knew what.", "ca-h": "Approach", "ca": "An AI assistant that works with the organisation's own data. Colleagues ask a question in plain language and get a well-founded answer.", "cr-h": "Result", "cr": "Faster insight, better prepared conversations, and customers who are informed proactively. Opportunities and problems surface earlier.", "c1h": "Documents and invoices", "c1": "Reading invoices from the inbox and turning them into a proposal that an employee checks and processes.", "c2h": "Inbox and requests", "c2": "Insight into what comes in, with messages routed automatically to the right person or process.", "c3h": "Checks and exceptions", "c3": "Connecting data from different systems, so exceptions stand out and the rest runs by itself.", "w-label": "How I work", "w-h": "Start small, deliver proof", "w-lead": "Every solution goes through the same four steps. You always know where you stand and what it delivers.", "s1h": "Understand", "s1": "Capture the process as it really runs, including the exceptions. That knowledge stays in your organisation.", "s2h": "Start small", "s2": "Choose one process with a lot of manual work and a clear gain, and build a first version for it.", "s3h": "Run side by side", "s3": "The solution runs alongside the current way of working until the outcome is right week after week.", "s4h": "Hand over", "s4": "Your team takes over, with a work instruction and a fixed place for the exceptions.", "o-label": "About Proficia", "oq": "“The biggest gains are not in the smartest technology, but in understanding how the work really gets done.”", "o1": "Proficia is my practice. I have worked as a branch manager, trainer, product owner and in management and executive roles, with a background in operations, supply chain and business transformation. So I know the work from the shop floor to the boardroom.", "o2": "I bring that experience to every assignment: listening, overseeing the chain and working with the people who do the work towards a solution that keeps working. Direct and honest, even when that means AI is not the best choice somewhere.", "m1h": "Experience", "m1": "Management, operations and transformation", "m2h": "Specialisation", "m2": "AI advisory and implementation", "m3h": "Based in", "li": "View my LinkedIn profile", "k-h": "Let's get acquainted", "k-lead": "Call or email for a first, no-obligation conversation. Within an hour you will know where AI can deliver the most in your organisation, and where it cannot.", "k1": "Phone", "copy1": "Copy", "copy2": "Copy", "foot": "Chamber of Commerce 42189233 · VAT NL005570911B10"};
+var NL = {"nav1": "Aanpak", "nav2": "Uit de praktijk", "nav3": "Werkwijze", "nav4": "Over", "nav5": "Contact", "eyebrow": "Proficia · AI-advies en implementatie", "h1a": "AI waar het kan.", "h1b": "De mens waar het moet.", "lede": "Ik help organisaties AI zo in te zetten dat mensen er sneller en beter door werken. Van een helder end-to-end beeld tot een oplossing die in de praktijk werkt en die je team zelf kan dragen.", "cta1": "Plan een kennismaking", "cta2": "Bekijk voorbeelden", "focus": "Wat je van mij kunt verwachten", "e1h": "Overzicht", "e1": "De hele keten in beeld voordat er iets wordt gebouwd", "e2h": "Een werkende oplossing", "e2": "Geen rapport, maar iets dat in de praktijk draait", "e3h": "Mensen in de regie", "e3": "AI doet het voorwerk, je team beslist", "e4h": "Kennis die blijft", "e4": "Vastgelegd en overgedragen aan je eigen mensen", "a-label": "Aanpak", "a-h": "Technologie volgt het doel", "a-lead": "Er is niet één manier om tot het resultaat te komen, en elke organisatie is anders. Daarom begint elke opdracht bij de vraag waar je naartoe wilt, en pas daarna bij de techniek.", "p1h": "De mens in de regie", "p1": "AI doet het voorwerk; mensen beoordelen, beslissen en houden het overzicht. Human in the loop, vanaf het ontwerp.", "p2h": "Eerst begrijpen waar het heen moet", "p2": "Doel, proces en uitzonderingen zijn helder voordat er iets wordt gebouwd.", "p3h": "End-to-end overzicht", "p3": "De hele keten in beeld, van eerste contact tot afronding. Niet één los onderdeel optimaliseren ten koste van de rest.", "p4h": "Het juiste model voor elke taak", "p4": "Verschillende modellen en tools, gekozen op wat werkt, wat het kost en wat je organisatie aankan.", "t-label": "Uit de praktijk", "t-h": "Wat het oplevert", "ft-label": "Uitgelicht", "ft-h": "Een interne AI-collega", "cv-h": "Vraag", "cv": "Medewerkers zochten informatie bij elkaar uit verschillende systemen. Dat kostte tijd en hing af van wie wat wist.", "ca-h": "Aanpak", "ca": "Een AI-assistent die werkt met de eigen data van de organisatie. Collega's stellen een vraag in gewone taal en krijgen een onderbouwd antwoord.", "cr-h": "Resultaat", "cr": "Sneller inzicht, beter voorbereide gesprekken, en klanten die proactief worden geïnformeerd. Kansen en problemen komen eerder in beeld.", "c1h": "Documenten en facturen", "c1": "Facturen uit de mailbox uitlezen en omzetten in een voorstel dat een medewerker controleert en verwerkt.", "c2h": "Mailbox en verzoeken", "c2": "Inzicht in wat er binnenkomt, en berichten automatisch bij de juiste persoon of het juiste proces.", "c3h": "Controles en afwijkingen", "c3": "Gegevens uit verschillende systemen koppelen, zodat afwijkingen opvallen en de rest vanzelf loopt.", "w-label": "Werkwijze", "w-h": "Klein beginnen, aantoonbaar opleveren", "w-lead": "Elke oplossing doorloopt dezelfde vier stappen. Zo weet je steeds waar je staat en wat het oplevert.", "s1h": "Begrijpen", "s1": "Het proces vastleggen zoals het werkelijk loopt, inclusief de uitzonderingen. Die kennis blijft in je organisatie.", "s2h": "Klein beginnen", "s2": "Eén proces kiezen met veel handwerk en een duidelijke winst, en daar een eerste versie voor bouwen.", "s3h": "Naast elkaar draaien", "s3": "De oplossing draait mee met de huidige werkwijze, tot de uitkomst weken achter elkaar klopt.", "s4h": "Overdragen", "s4": "Je team neemt het over, met een werkbeschrijving en een vaste plek voor de uitzonderingen.", "o-label": "Over Proficia", "oq": "“De meeste winst zit niet in de slimste technologie, maar in begrijpen hoe het werk echt gaat.”", "o1": "Proficia is mijn praktijk. Ik werkte als bedrijfsleider, trainer, product owner en in management- en directiefuncties, met een achtergrond in operations, supply chain en business transformation. Ik ken het werk dus van de vloer tot de directietafel.", "o2": "Die ervaring neem ik mee in elke opdracht: luisteren, de keten overzien en samen met de mensen die het werk doen tot een oplossing komen die blijft werken. Direct en eerlijk, ook als dat betekent dat AI ergens niet de beste keuze is.", "m1h": "Ervaring", "m1": "Management, operations en transformatie", "m2h": "Specialisatie", "m2": "AI-advies en implementatie", "m3h": "Vestiging", "li": "Bekijk mijn profiel op LinkedIn", "k-h": "Laten we kennismaken", "k-lead": "Bel of mail voor een eerste gesprek, vrijblijvend. In een uur weet je waar AI in jouw organisatie het meeste kan opleveren, en waar juist niet.", "k1": "Telefoon", "copy1": "Kopieer", "copy2": "Kopieer", "foot": "KvK 42189233 · btw NL005570911B10"};
 function setLang(l){
-  var dict = l === 'en' ? EN : NL;
-  document.querySelectorAll('[data-i]').forEach(function(el){ var v = dict[el.dataset.i]; if (v) el.textContent = v; });
+  var d = l === 'en' ? EN : NL;
+  document.querySelectorAll('[data-i]').forEach(function(el){ var v = d[el.dataset.i]; if (v) el.innerHTML = v; });
   document.querySelectorAll('.steps li').forEach(function(li){ li.dataset.step = l === 'en' ? 'Step' : 'Stap'; });
   document.documentElement.lang = l;
   document.getElementById('btn-nl').setAttribute('aria-pressed', l === 'nl');
@@ -337,13 +304,15 @@ function setLang(l){
   try { localStorage.setItem('proficia-lang', l); } catch(e){}
 }
 document.querySelectorAll('.lang button').forEach(function(b){
-  b.addEventListener('click', function(){ setLang(b.dataset.lang); if (b.dataset.lang === 'en') { history.replaceState(null, '', '#en'); } else if (location.hash === '#en') { history.replaceState(null, '', location.pathname); } });
+  b.addEventListener('click', function(){
+    setLang(b.dataset.lang);
+    try { if (b.dataset.lang === 'en') history.replaceState(null, '', '#en'); else if (location.hash === '#en') history.replaceState(null, '', location.pathname); } catch(e){}
+  });
 });
 var start = 'nl';
 try { start = localStorage.getItem('proficia-lang') || 'nl'; } catch(e){}
 if (location.hash === '#en') start = 'en';
 if (start === 'en') setLang('en');
-
 document.querySelectorAll('.copy').forEach(function(b){
   b.addEventListener('click', function(){
     var el = document.getElementById(b.dataset.copy), t = el.textContent, orig = b.textContent;
