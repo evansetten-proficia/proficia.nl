@@ -21,6 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://proficia.nl/diensten.html">
 <script>document.documentElement.classList.add('js')</script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="81b0eff4-c27b-486d-beba-0f5c3e738f34" data-domains="proficia.nl"></script>
 <style>
 /* Layout: ingetogen adviespraktijk. Navy openingsband, daarna kop links / inhoud rechts met dunne lijnen; één uitgelichte toepassing; groen alleen als accent. */
 :root{
@@ -414,7 +415,7 @@ nav a[aria-current="page"]{color:var(--fg);font-weight:600}
   </section>
   <section class="band"><div class="wrap">
     <div><h2 data-i="db-h">Benieuwd wat past bij jouw organisatie?</h2><p data-i="db-p">In een eerste gesprek kijken we waar de meeste winst zit. Vrijblijvend.</p></div>
-    <div class="actions"><a class="btn solid" href="over.html#contact" data-i="db-b1">Plan een kennismaking</a><a class="btn line" href="quickscan.html" data-i="db-b2">Doe eerst de quickscan</a></div>
+    <div class="actions"><a class="btn solid" href="over.html#contact" data-umami-event="CTA: kennismaking" data-i="db-b1">Plan een kennismaking</a><a class="btn line" href="quickscan.html" data-umami-event="CTA: quickscan" data-i="db-b2">Doe eerst de quickscan</a></div>
   </div></section>
 
 </main>
@@ -434,6 +435,7 @@ var MSG = {"nl": {"missing": "Vul je naam, e-mailadres en bericht in.", "mail": 
 var QS = {"q": [{"layer": "gov", "nl": "Zijn er afspraken over welke AI-tools medewerkers mogen gebruiken en welke gegevens erin mogen?", "en": "Are there agreements on which AI tools employees may use and which data may go into them?", "opts": [["Nee, nog niet", "No, not yet"], ["Mondeling, niet vastgelegd", "Verbally, not written down"], ["Vastgelegd, maar niet iedereen kent ze", "Written down, but not everyone knows them"], ["Vastgelegd en bij iedereen bekend", "Written down and known to everyone"]]}, {"layer": "gov", "nl": "Is duidelijk wie eigenaar is van data en AI-toepassingen, en wie goedkeurt?", "en": "Is it clear who owns data and AI applications, and who approves?", "opts": [["Nee", "No"], ["Deels, per afdeling verschillend", "Partly, it differs per department"], ["Grotendeels", "Largely"], ["Ja, vastgelegd", "Yes, written down"]]}, {"layer": "data", "nl": "Hoe betrouwbaar zijn de gegevens in jullie belangrijkste systemen?", "en": "How reliable is the data in your main systems?", "opts": [["Veel handwerk en correcties", "Lots of manual work and corrections"], ["Redelijk, met bekende gaten", "Reasonable, with known gaps"], ["Goed, op een paar uitzonderingen na", "Good, with a few exceptions"], ["Betrouwbaar en actueel", "Reliable and up to date"]]}, {"layer": "data", "nl": "Waar zit de kennis over hoe het werk echt gaat?", "en": "Where does the knowledge of how the work really gets done live?", "opts": [["Vooral in de hoofden van een paar mensen", "Mostly in the heads of a few people"], ["Deels vastgelegd, verspreid over plekken", "Partly written down, spread across places"], ["Grotendeels vastgelegd", "Largely written down"], ["Vastgelegd, actueel en vindbaar", "Written down, current and easy to find"]]}, {"layer": "proc", "nl": "Hoe gestandaardiseerd zijn jullie belangrijkste processen?", "en": "How standardised are your main processes?", "opts": [["Iedereen doet het op zijn eigen manier", "Everyone does it their own way"], ["Er is een lijn, met veel uitzonderingen", "There is a line, with many exceptions"], ["Grotendeels standaard", "Largely standard"], ["Standaard en beschreven", "Standard and documented"]]}, {"layer": "proc", "nl": "Hoeveel tijd gaat er naar overtypen, zoeken en controleren?", "en": "How much time goes into retyping, searching and checking?", "opts": [["Heel veel: dagelijks uren", "A lot: hours every day"], ["Flink: een paar uur per persoon per week", "Quite a bit: a few hours per person per week"], ["Beperkt", "Limited"], ["Vrijwel niets", "Hardly any"]]}, {"layer": "ai", "nl": "Hoe wordt AI nu gebruikt in jullie organisatie?", "en": "How is AI used in your organisation today?", "opts": [["Niet", "Not at all"], ["Individueel, op eigen initiatief", "Individually, on people’s own initiative"], ["In een paar teams, met afspraken", "In a few teams, with agreements"], ["Structureel, ingebouwd in processen", "Structurally, built into processes"]]}, {"layer": "ppl", "nl": "Hoe staan medewerkers tegenover AI?", "en": "How do employees feel about AI?", "opts": [["Onbekend of afwachtend", "Unfamiliar or wait-and-see"], ["Nieuwsgierig, maar onzeker", "Curious, but unsure"], ["Positief, met een paar voorlopers", "Positive, with a few front-runners"], ["Positief en actief betrokken", "Positive and actively involved"]]}], "lname": {"ppl": ["Mensen en resultaat", "People and results"], "ai": ["AI en automatisering", "AI and automation"], "proc": ["Processen", "Processes"], "data": ["Data en kennis", "Data and knowledge"], "gov": ["Governance, compliance en security", "Governance, compliance and security"]}, "advice": {"gov": {"h": ["Begin met spelregels", "Start with ground rules"], "p": ["Leg vast welke tools en welke gegevens wel en niet mogen, en wie beslist. Dat is snel geregeld, voorkomt risico’s en is de basis voor alles erboven. Een training is vaak de snelste start.", "Agree which tools and which data are and are not allowed, and who decides. It is quick to arrange, prevents risk and is the basis for everything above it. A training is often the fastest start."], "href": "training.html", "cta": ["Bekijk de training", "See the training"]}, "data": {"h": ["Breng data en kennis op orde", "Get your data and knowledge in order"], "p": ["Zonder betrouwbare gegevens en vastgelegde kennis levert ook het beste model geen goede uitkomst. Begin met vastleggen hoe het werk echt gaat, inclusief de uitzonderingen.", "Without reliable data and captured knowledge, even the best model will not give a good outcome. Start by capturing how the work really gets done, exceptions included."], "href": "diensten.html", "cta": ["Bekijk procesoptimalisatie", "See process optimisation"]}, "proc": {"h": ["Standaardiseer eerst één proces", "Standardise one process first"], "p": ["Kies één proces met veel handwerk en breng het terug naar één vaste route. Daar zit je eerste winst, en daarna wordt automatiseren eenvoudig.", "Choose one process with a lot of manual work and reduce it to one fixed route. That is your first gain, and automating becomes easy afterwards."], "href": "diensten.html", "cta": ["Bekijk procesoptimalisatie", "See process optimisation"]}, "ai": {"h": ["Je basis staat: begin klein met AI", "Your foundation is in place: start small with AI"], "p": ["Kies één proces met duidelijke winst en laat een eerste toepassing naast de huidige werkwijze draaien, tot de uitkomst aantoonbaar klopt.", "Choose one process with a clear gain and run a first application alongside the current way of working, until the outcome demonstrably works."], "href": "diensten.html", "cta": ["Bekijk implementatie", "See implementation"]}, "ppl": {"h": ["Neem je mensen mee", "Bring your people along"], "p": ["De techniek is het probleem niet. Een training met voorbeelden uit het eigen werk maakt van twijfel gebruik, en levert meteen ideeën op.", "Technology is not the issue. A training with examples from their own work turns doubt into use, and produces ideas straight away."], "href": "training.html", "cta": ["Bekijk de training", "See the training"]}}, "levels": [{"max": 35, "name": ["Startpunt", "Starting point"], "p": ["De basis vraagt eerst aandacht. Goed nieuws: daar is ook de meeste winst te halen.", "The foundation needs attention first. The good news: that is also where the biggest gain is."]}, {"max": 60, "name": ["Fundament leggen", "Laying the foundation"], "p": ["Er staat iets, maar er zijn duidelijke gaten. Dicht die eerst, dan wordt AI een versneller in plaats van een risico.", "Something is in place, but there are clear gaps. Close those first, and AI becomes an accelerator instead of a risk."]}, {"max": 80, "name": ["Klaar om op te bouwen", "Ready to build"], "p": ["Een goede basis. Je kunt gericht beginnen met de eerste toepassingen.", "A good foundation. You can start purposefully with the first applications."]}, {"max": 101, "name": ["Klaar om op te schalen", "Ready to scale"], "p": ["Sterk. De vraag is nu hoe je het breder en structureel inzet.", "Strong. The question now is how to apply it more broadly and structurally."]}]};
 var lang = 'nl';
 var onLang = [];
+function track(n, d){ try { if (window.umami) umami.track(n, d); } catch(e){} }
 function setLang(l){
   lang = l;
   var d = l === 'en' ? EN : NL;
@@ -524,7 +526,7 @@ if (form) {
     if (gas) data._honey = form._honey.value;
     fetch(FORM_ENDPOINT, { method: 'POST', headers: gas ? { 'Content-Type': 'text/plain;charset=utf-8' } : { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) })
       .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ if (!r.ok || j.success === 'false' || j.success === false) throw new Error('fail'); }); })
-      .then(function(){ st.textContent = m.ok; st.classList.add('ok'); form.reset(); })
+      .then(function(){ st.textContent = m.ok; st.classList.add('ok'); track('Contactformulier verstuurd', { onderwerp: form.onderwerp.value }); form.reset(); })
       .catch(function(){ st.textContent = m.err; st.classList.add('err'); })
       .then(function(){ btn.disabled = false; });
   });
@@ -533,7 +535,7 @@ if (form) {
 // quickscan
 var qsEl = document.getElementById('qs');
 if (qsEl) {
-  var ans = [], cur = 0, ORDER = ['ppl', 'ai', 'proc', 'data', 'gov'];
+  var qsDone = false, ans = [], cur = 0, ORDER = ['ppl', 'ai', 'proc', 'data', 'gov'];
   var $ = function(id){ return document.getElementById(id); };
   function L(o){ return o[lang === 'en' ? 1 : 0] !== undefined ? o[lang === 'en' ? 1 : 0] : o[lang]; }
   function renderQ(){
@@ -547,7 +549,7 @@ if (qsEl) {
     q.opts.forEach(function(o, i){
       var b = document.createElement('button'); b.type = 'button'; b.textContent = L(o);
       b.setAttribute('aria-pressed', ans[cur] === i);
-      b.addEventListener('click', function(){ ans[cur] = i; if (cur < QS.q.length - 1) { cur++; renderQ(); } else { renderRes(); } });
+      b.addEventListener('click', function(){ if (cur === 0 && ans.length === 0) track('Quickscan gestart'); ans[cur] = i; if (cur < QS.q.length - 1) { cur++; renderQ(); } else { renderRes(); } });
       box.appendChild(b);
     });
     $('qs-back').disabled = cur === 0;
@@ -581,10 +583,11 @@ if (qsEl) {
       ORDER.slice().reverse().map(function(k){ return '- ' + L(QS.lname[k]) + ': ' + sc[k] + '%'; }).join('\n') + '\n\n' +
       (lang === 'en' ? 'I would like to discuss this.' : 'Ik bespreek dit graag.');
     try { sessionStorage.setItem('proficia-qs', txt); } catch(e){}
+    if (!qsDone) { qsDone = true; track('Quickscan afgerond', { niveau: lv.name[0], score: tot, zwakste: weak }); }
     $('qs-res').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
   }
   $('qs-back').addEventListener('click', function(){ if (cur > 0) { cur--; renderQ(); } });
-  $('qs-again').addEventListener('click', function(){ ans = []; cur = 0; renderQ(); });
+  $('qs-again').addEventListener('click', function(){ ans = []; cur = 0; qsDone = false; renderQ(); });
   onLang.push(function(){ if (!$('qs-res').hidden) renderRes(); else renderQ(); });
   renderQ();
 }
