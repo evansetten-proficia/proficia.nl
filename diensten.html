@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="only light">
+<meta name="theme-color" content="#f7f9f8">
 <title>Diensten · Proficia</title>
 <meta name="description" content="Strategie, procesoptimalisatie, implementatie en AI verankeren in de organisatie. Op maat en binnen de Europese regels.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,14 +37,7 @@
   --font-display:"Source Serif 4", Georgia, "Times New Roman", serif;
   --font-body:Calibri, Carlito, "Source Sans 3", "Segoe UI", Arial, sans-serif;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#0b1120; --band:#0f172a; --fg:#e9eef4; --muted:#a7b4c4; --line:#223047; --green-ink:#34d399; color-scheme:dark;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#0b1120; --band:#0f172a; --fg:#e9eef4; --muted:#a7b4c4; --line:#223047; --green-ink:#34d399; color-scheme:dark;
-}
+:root{color-scheme:only light}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
