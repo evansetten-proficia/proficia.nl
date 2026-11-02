@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Diensten · Proficia</title>
+<meta name="description" content="Strategie, procesoptimalisatie, implementatie en AI verankeren in de organisatie. Op maat en binnen de Europese regels.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:title" content="Diensten · Proficia">
+<meta property="og:description" content="Strategie, procesoptimalisatie, implementatie en AI verankeren in de organisatie. Op maat en binnen de Europese regels.">
+<meta property="og:url" content="https://proficia.nl/diensten.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://proficia.nl/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://proficia.nl/diensten.html">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* Layout: ingetogen adviespraktijk. Navy openingsband, daarna kop links / inhoud rechts met dunne lijnen; één uitgelichte toepassing; groen alleen als accent. */
+:root{
+  --navy:#0f172a;
+  --green:#10b981;
+  --green-ink:#047857;
+  --bg:#f7f9f8;
+  --band:#ffffff;
+  --fg:#0f172a;
+  --muted:#475467;
+  --line:#e2e8e5;
+  --on-navy:#e9eef4;
+  --on-navy-muted:#a7b4c4;
+  --font-display:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-body:Calibri, Carlito, "Source Sans 3", "Segoe UI", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b1120; --band:#0f172a; --fg:#e9eef4; --muted:#a7b4c4; --line:#223047; --green-ink:#34d399; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b1120; --band:#0f172a; --fg:#e9eef4; --muted:#a7b4c4; --line:#223047; --green-ink:#34d399; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:1.125rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+a{color:var(--green-ink);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;line-height:1.15;text-wrap:balance;margin:0}
+.label{font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green-ink)}
+
+/* topbalk */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top, 0px);z-index:10;background:var(--bg)}
+header{background:color-mix(in srgb, var(--bg) 92%, transparent);backdrop-filter:blur(8px);color:var(--fg);position:sticky;top:env(safe-area-inset-top, 0px);z-index:5;border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:16px}
+.brand{display:flex;align-items:center;gap:12px;color:var(--fg);text-decoration:none;font-weight:700;font-size:1.3rem;letter-spacing:.01em}
+.brand svg{width:32px;height:19px}
+nav{display:flex;align-items:center;gap:24px}
+nav ul{display:flex;align-items:center;gap:24px;list-style:none;margin:0;padding:0}
+nav a{color:var(--muted);text-decoration:none;font-size:.98rem}
+nav a:hover{color:var(--fg)}
+.lang{display:flex;border:1px solid var(--line);border-radius:2px;overflow:hidden}
+.lang button{font:600 .82rem var(--font-body);letter-spacing:.06em;background:transparent;color:var(--muted);border:0;padding:6px 10px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+@media (max-width:820px){nav ul{display:none}}
+
+/* opening */
+.intro{background:var(--bg);color:var(--fg);border-bottom:1px solid var(--line)}
+.intro .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:64px;padding-block:92px 84px;align-items:end}
+.intro .wrap > *{min-width:0}
+.intro .label{color:var(--green-ink)}
+.intro h1{color:var(--fg);font-size:clamp(2.4rem, 5vw, 3.8rem);letter-spacing:-.01em;margin:18px 0 22px}
+.intro h1 span{display:block;color:var(--green-ink)}
+.intro h1 span:first-child{color:var(--fg)}
+.intro p.lede{color:var(--muted);font-size:1.22rem;max-width:32em;margin:0 0 34px}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;font:600 1rem var(--font-body);padding:13px 22px;border-radius:2px;text-decoration:none;border:1px solid transparent}
+.btn.solid{background:var(--fg);color:var(--bg)}
+.btn.solid:hover{background:var(--green-ink);color:#fff}
+.btn.line{border-color:var(--line);color:var(--fg)}
+.btn.line:hover{border-color:var(--green)}
+.focus{border-left:2px solid var(--green);padding-left:24px}
+.focus h2{font-family:var(--font-body);font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green-ink);margin-bottom:14px}
+.focus ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.focus li{color:var(--fg);font-size:1.05rem;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.focus li:last-child{border-bottom:0;padding-bottom:0}
+@media (max-width:860px){.intro .wrap{grid-template-columns:1fr;gap:44px;padding-block:56px}}
+
+/* secties */
+section{padding-block:84px;border-bottom:1px solid var(--line)}
+.split{display:grid;grid-template-columns:300px 1fr;gap:56px}
+.split > *{min-width:0}
+.split h2{font-size:clamp(1.8rem, 3vw, 2.3rem);margin-top:12px}
+.lead{color:var(--muted);margin:0 0 36px;max-width:38em}
+@media (max-width:860px){.split{grid-template-columns:1fr;gap:16px}section{padding-block:56px}}
+
+.principles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px}
+.principle{padding-block:22px;border-top:1px solid var(--line)}
+.principle h3{font-size:1.2rem;margin-bottom:6px}
+.principle p{margin:0;color:var(--muted);font-size:1.04rem}
+@media (max-width:640px){.principles{grid-template-columns:1fr}}
+
+.feature{background:var(--band);border-left:3px solid var(--green);padding:32px 34px;margin-bottom:36px}
+.feature .label{margin-bottom:10px}
+.feature h3{font-size:clamp(1.4rem, 2.4vw, 1.75rem);margin-bottom:12px}
+.feature p{margin:0 0 18px;max-width:40em}
+.feature ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 32px}
+.feature li{position:relative;padding-left:22px;font-size:1.04rem}
+.feature li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:2px;background:var(--green)}
+@media (max-width:640px){.feature{padding:24px 20px}.feature ul{grid-template-columns:1fr}}
+.cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.case{border-top:1px solid var(--line);padding-top:18px}
+.case h3{font-size:1.15rem;margin-bottom:8px}
+.case p{margin:0;color:var(--muted);font-size:1.02rem}
+@media (max-width:820px){.cases{grid-template-columns:1fr;gap:20px}}
+
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 48px;counter-reset:s}
+.steps li{border-top:2px solid var(--green);padding-top:18px}
+.steps li::before{counter-increment:s;content:attr(data-step) " " counter(s);display:block;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green-ink);margin-bottom:8px}
+.steps h3{font-size:1.25rem;margin-bottom:8px}
+.steps p{margin:0;color:var(--muted)}
+@media (max-width:640px){.steps{grid-template-columns:1fr}}
+
+.profile p{margin:0 0 18px;max-width:38em}
+.profile .meta{display:flex;flex-wrap:wrap;gap:10px 28px;margin:26px 0 30px;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--muted);font-size:1rem}
+.profile .meta b{display:block;color:var(--fg);font-weight:600}
+.li-btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;text-decoration:none;color:var(--fg);border:1px solid var(--line);padding:11px 18px;border-radius:2px}
+.li-btn:hover{border-color:var(--green)}
+.li-btn svg{width:18px;height:18px;fill:#0a66c2}
+
+.contact{background:var(--navy);color:var(--on-navy);border-bottom:0}
+.contact .label{color:#6ee7b7}
+.contact h2{color:#fff}
+.contact .lead{color:var(--on-navy-muted)}
+.lines{display:grid;max-width:560px}
+.line{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:16px;border-top:1px solid rgba(255,255,255,.12)}
+.line:last-child{border-bottom:1px solid rgba(255,255,255,.12)}
+.line div{min-width:0}
+.line small{display:block;font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--on-navy-muted)}
+.line span,.line a.val{font-size:1.2rem;color:#fff;overflow-wrap:anywhere;text-decoration:none}
+.line a.val:hover{text-decoration:underline}
+.copy{flex:none;font:600 .85rem var(--font-body);padding:7px 14px;border-radius:2px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;cursor:pointer}
+.copy:hover{border-color:#fff}
+
+footer{background:#0a1020;color:#8796a8;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;padding-block:24px}
+
+.focus li b{display:block;color:var(--fg);font-weight:600}
+.focus li span{color:var(--muted);font-size:.98rem}
+.case-big{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:20px}
+.case-big div{min-width:0}
+.case-big h4{margin:0 0 6px;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green-ink)}
+.case-big p{margin:0;font-size:1.02rem;color:var(--fg)}
+@media (max-width:720px){.case-big{grid-template-columns:1fr;gap:16px}}
+.portrait{display:block;width:150px;height:150px;border-radius:50%;object-fit:cover;margin-top:28px;border:3px solid var(--band);box-shadow:0 0 0 1px var(--line)}
+.quote{font-family:var(--font-display);font-size:1.3rem;line-height:1.45;border-left:3px solid var(--green);padding-left:22px;margin:0 0 26px;max-width:34em}
+
+/* diensten */
+.svc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px}
+.svc > div{padding-block:24px;border-top:1px solid var(--line);min-width:0}
+.svc h3{font-size:1.25rem;margin-bottom:8px}
+.svc p{margin:0;color:var(--muted);font-size:1.04rem}
+.note{margin-top:28px;padding:16px 20px;border:1px solid var(--line);background:var(--band);font-size:1.02rem}
+.note b{color:var(--green-ink)}
+@media (max-width:640px){.svc{grid-template-columns:1fr}}
+
+/* fundament: lagen */
+.stack{display:grid;gap:6px;margin:6px 0 26px}
+.layer{display:grid;grid-template-columns:220px 1fr;gap:24px;align-items:center;padding:16px 22px;border:1px solid var(--line);background:var(--band)}
+.layer > *{min-width:0}
+.layer h3{font-size:1.12rem}
+.layer p{margin:0;color:var(--muted);font-size:1rem}
+.layer.top{margin-inline:28px}
+.layer.mid{margin-inline:14px}
+.layer.data{border-color:color-mix(in srgb, var(--green) 45%, var(--line));background:color-mix(in srgb, var(--green) 9%, var(--band))}
+.layer.base{background:var(--navy);border-color:var(--navy)}
+.layer.base h3{color:#fff}
+.layer.base p{color:#b9c6d4}
+.stack-cap{display:flex;justify-content:space-between;gap:16px;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+@media (max-width:720px){.layer{grid-template-columns:1fr;gap:4px}.layer.top,.layer.mid{margin-inline:0}}
+.steps-out{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:8px}
+.steps-out div{border-top:2px solid var(--green);padding-top:12px;min-width:0}
+.steps-out b{display:block;margin-bottom:4px}
+.after-steps{margin:22px 0 0;color:var(--muted)}
+.steps-out span{color:var(--muted);font-size:1rem}
+@media (max-width:720px){.steps-out{grid-template-columns:1fr}}
+
+/* training */
+.tr-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:1px solid var(--line);background:var(--band);margin:4px 0 28px}
+.tr-facts div{padding:16px 20px;min-width:0}
+.tr-facts div + div{border-left:1px solid var(--line)}
+.tr-facts b{display:block;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green-ink);margin-bottom:4px}
+.tr-facts span{font-size:1.04rem}
+@media (max-width:640px){.tr-facts{grid-template-columns:1fr}.tr-facts div + div{border-left:0;border-top:1px solid var(--line)}}
+.agenda{list-style:none;margin:0 0 28px;padding:0;counter-reset:ag}
+.agenda li{display:grid;grid-template-columns:44px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--line);counter-increment:ag}
+.agenda li::before{content:counter(ag,decimal-leading-zero);font-family:var(--font-display);font-size:1.1rem;color:var(--green-ink)}
+.agenda b{display:block}
+.agenda span{color:var(--muted);font-size:1rem}
+.tr-variants{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-bottom:26px}
+.tr-variants > div{border:1px solid var(--line);padding:18px 20px;background:var(--band);min-width:0}
+.tr-variants h3{font-size:1.15rem;margin-bottom:6px}
+.tr-variants p{margin:0 0 10px;color:var(--muted);font-size:1rem}
+.tr-variants .price{margin:0;color:var(--fg);font-weight:600}
+@media (max-width:640px){.tr-variants{grid-template-columns:1fr}}
+
+/* compliance */
+.comp{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 48px;list-style:none;margin:0;padding:0}
+.comp li{border-top:1px solid var(--line);padding-top:14px}
+.comp b{display:block;margin-bottom:4px}
+.comp span{color:var(--muted);font-size:1.02rem}
+@media (max-width:640px){.comp{grid-template-columns:1fr}}
+
+/* formulier */
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:48px}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
+form{display:grid;gap:14px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:520px){.row2{grid-template-columns:1fr}}
+label{display:grid;gap:6px;font-size:.85rem;font-weight:600;letter-spacing:.04em;color:#cfd8e3}
+input,textarea,select{font:1rem var(--font-body);color:#fff;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.22);border-radius:2px;padding:11px 12px;width:100%}
+input:focus,textarea:focus,select:focus{outline:2px solid var(--green);outline-offset:1px;border-color:transparent}
+textarea{min-height:130px;resize:vertical}
+select option{color:#0f172a}
+.hp{position:absolute;left:-9999px}
+.consent{font-size:.88rem;color:var(--on-navy-muted);font-weight:400;letter-spacing:0}
+.consent a{color:#6ee7b7}
+.submit{justify-self:start;font:600 1rem var(--font-body);padding:13px 22px;border-radius:2px;border:0;background:var(--green);color:#052e22;cursor:pointer}
+.submit:hover{background:#34d399}
+.submit[disabled]{opacity:.6;cursor:wait}
+.status{font-size:1rem;min-height:1.4em;margin:0}
+.status.ok{color:#6ee7b7}
+.status.err{color:#fca5a5}
+.book{display:inline-block;margin:0 0 22px;font:600 1rem var(--font-body);padding:12px 20px;border-radius:2px;border:1px solid rgba(255,255,255,.35);color:#fff;text-decoration:none}
+.book:hover{border-color:#fff}
+.book[hidden]{display:none}
+footer a{color:#8796a8}
+
+/* navigatie */
+nav a[aria-current="page"]{color:var(--fg);font-weight:600}
+.qs-link{border:1px solid var(--green);color:var(--green-ink)!important;padding:7px 12px;border-radius:2px;font-weight:600}
+.qs-link:hover{background:var(--green);color:#052e22!important}
+.menu-btn{display:none;background:transparent;border:1px solid var(--line);border-radius:2px;padding:7px 10px;font:600 .9rem var(--font-body);color:var(--fg);cursor:pointer}
+@media (max-width:820px){
+  .menu-btn{display:inline-block}
+  nav ul.open{display:flex;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px max(20px, env(safe-area-inset-left, 0px)) 16px}
+  nav ul.open li a{display:block;padding:12px 0;border-bottom:1px solid var(--line)}
+  nav ul.open .qs-link{margin-top:12px;text-align:center;border-bottom:1px solid var(--green)}
+  header .bar{position:relative}
+}
+/* subpagina-kop */
+.page-hero{border-bottom:1px solid var(--line)}
+.page-hero .wrap{padding-block:72px 56px}
+.page-hero h1{font-size:clamp(2.1rem, 4.4vw, 3.2rem);margin:14px 0 16px;max-width:18em}
+.page-hero p{color:var(--muted);font-size:1.18rem;max-width:36em;margin:0}
+@media (max-width:860px){.page-hero .wrap{padding-block:48px 40px}}
+/* teasers home */
+.teasers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.teaser{display:block;border:1px solid var(--line);background:var(--band);padding:22px 24px;text-decoration:none;color:var(--fg);transition:border-color .2s, transform .2s, box-shadow .2s;min-width:0}
+.teaser h3{font-size:1.2rem;margin-bottom:6px}
+.teaser p{margin:0 0 12px;color:var(--muted);font-size:1.02rem}
+.teaser .more{font-weight:600;color:var(--green-ink);font-size:.95rem}
+.teaser:hover{border-color:var(--green);transform:translateY(-2px);box-shadow:0 8px 24px -16px rgba(15,23,42,.35)}
+@media (max-width:640px){.teasers{grid-template-columns:1fr}}
+.band{background:var(--navy);color:var(--on-navy);border-bottom:0}
+.band .wrap{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
+.band h2{color:#fff;font-size:clamp(1.6rem, 3vw, 2.1rem);margin-bottom:8px}
+.band p{color:var(--on-navy-muted);margin:0;max-width:36em}
+.band .btn.solid{background:var(--green);color:#052e22}
+.band .btn.solid:hover{background:#34d399}
+.band .btn.line{border-color:rgba(255,255,255,.35);color:#fff}
+.band .actions{display:flex;flex-wrap:wrap;gap:12px}
+@media (max-width:760px){.band .wrap{grid-template-columns:1fr}}
+.textlink{font-weight:600;color:var(--green-ink);text-decoration:none}
+.textlink:hover{text-decoration:underline}
+/* interactief fundament */
+.layer{cursor:pointer;transition:border-color .2s, box-shadow .2s, transform .2s;position:relative}
+.layer:hover{border-color:var(--green)}
+.layer:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+.layer[aria-expanded="true"]{border-color:var(--green);box-shadow:0 0 0 1px var(--green)}
+.layer.base[aria-expanded="true"]{box-shadow:0 0 0 2px var(--green)}
+.layer .chev{position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:.8rem;color:var(--muted);transition:transform .2s}
+.layer.base .chev{color:#b9c6d4}
+.layer[aria-expanded="true"] .chev{transform:translateY(-50%) rotate(180deg)}
+.layer{padding-right:40px}
+.layer-panel{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 32px;border:1px solid var(--line);border-top:3px solid var(--green);background:var(--band);padding:20px 24px;margin:-2px 0 8px}
+.layer-panel[hidden]{display:none}
+.layer-panel h4{margin:0 0 6px;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green-ink)}
+.layer-panel p{margin:0;font-size:1.02rem}
+@media (max-width:640px){.layer-panel{grid-template-columns:1fr}}
+.hint{font-size:.95rem;color:var(--green-ink);margin:-18px 0 22px}
+/* tijdlijn werkwijze */
+.timeline{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;list-style:none;margin:8px 0 0;padding:34px 0 0}
+.timeline::before{content:"";position:absolute;left:0;right:0;top:9px;height:2px;background:var(--line)}
+.timeline .prog{position:absolute;left:0;top:9px;height:2px;width:0;background:var(--green);transition:width .9s ease}
+.timeline li{position:relative;min-width:0}
+.timeline li::before{content:"";position:absolute;top:-32px;left:0;width:16px;height:16px;border-radius:50%;background:var(--bg);border:2px solid var(--line);transition:border-color .4s, background .4s}
+.timeline li.on::before{border-color:var(--green);background:var(--green)}
+.timeline small{display:block;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green-ink);margin-bottom:6px}
+.timeline h3{font-size:1.2rem;margin-bottom:6px}
+.timeline p{margin:0;color:var(--muted);font-size:1.02rem}
+@media (max-width:760px){
+  .timeline{grid-template-columns:1fr;padding:0 0 0 34px;gap:28px}
+  .timeline::before{left:7px;right:auto;top:0;bottom:0;width:2px;height:auto}
+  .timeline .prog{left:7px;top:0;width:2px!important;height:0;transition:height .9s ease}
+  .timeline li::before{left:-34px;top:2px}
+}
+/* animaties */
+.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease, transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .teaser,.layer,.timeline .prog,.qs-bar i{transition:none!important}
+}
+/* quickscan */
+.qs{max-width:760px}
+.qs-progress{height:4px;background:var(--line);margin-bottom:28px}
+.qs-progress i{display:block;height:100%;width:0;background:var(--green);transition:width .3s}
+.qs-count{font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green-ink);margin:0 0 8px}
+.qs h2{font-size:clamp(1.4rem, 2.6vw, 1.8rem);margin-bottom:6px}
+.qs .layer-tag{color:var(--muted);margin:0 0 22px}
+.qs-opts{display:grid;gap:10px;margin-bottom:24px}
+.qs-opts button{text-align:left;font:1.04rem var(--font-body);color:var(--fg);background:var(--band);border:1px solid var(--line);border-radius:2px;padding:14px 18px;cursor:pointer;transition:border-color .15s}
+.qs-opts button:hover{border-color:var(--green)}
+.qs-opts button[aria-pressed="true"]{border-color:var(--green);box-shadow:inset 3px 0 0 var(--green)}
+.qs-nav{display:flex;gap:12px;align-items:center}
+.qs-nav button{font:600 1rem var(--font-body);padding:11px 18px;border-radius:2px;cursor:pointer}
+.qs-back{background:transparent;border:1px solid var(--line);color:var(--fg)}
+.qs-back[disabled]{opacity:.4;cursor:default}
+.qs-result h2{margin-bottom:10px}
+.qs-level{font-family:var(--font-display);font-size:1.5rem;color:var(--green-ink);margin:0 0 6px}
+.qs-bars{display:grid;gap:6px;margin:26px 0}
+.qs-bar{display:grid;grid-template-columns:230px 1fr 52px;gap:16px;align-items:center;padding:12px 16px;border:1px solid var(--line);background:var(--band)}
+.qs-bar b{font-size:1rem}
+.qs-bar span.track{height:8px;background:var(--line);position:relative}
+.qs-bar i{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--green);transition:width .8s ease}
+.qs-bar em{font-style:normal;font-weight:600;text-align:right}
+.qs-bar.base{background:var(--navy);border-color:var(--navy)}
+.qs-bar.base b,.qs-bar.base em{color:#fff}
+.qs-bar.base span.track{background:rgba(255,255,255,.2)}
+@media (max-width:560px){.qs-bar{grid-template-columns:1fr 44px}.qs-bar span.track{grid-column:1 / -1;grid-row:2}}
+.qs-advice{background:var(--band);border-left:3px solid var(--green);padding:20px 24px;margin-bottom:26px}
+.qs-advice h3{font-size:1.15rem;margin-bottom:6px}
+.qs-advice p{margin:0}
+.qs-note{font-size:.92rem;color:var(--muted);margin-top:18px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="./" aria-label="Proficia, home">
+      <svg viewBox="0 0 112 64" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#0e9f74"/></linearGradient></defs><polygon points="27,22 111,1 86,41 0,63" fill="url(#lg)"/></svg>
+      Proficia
+    </a>
+    <nav aria-label="Menu">
+      <ul id="menu">
+        <li><a href="diensten.html" aria-current="page" data-i="nav1">Diensten</a></li>
+        <li><a href="aanpak.html" data-i="nav3">Aanpak</a></li>
+        <li><a href="training.html" data-i="nav7">Training</a></li>
+        <li><a href="over.html" data-i="nav5">Over</a></li>
+        <li><a href="over.html#contact" data-i="nav6">Contact</a></li>
+        <li><a class="qs-link" href="quickscan.html" data-i="navqs">AI-quickscan</a></li>
+      </ul>
+      <div class="lang" role="group" aria-label="Taal / Language">
+        <button type="button" id="btn-nl" data-lang="nl" aria-pressed="true">NL</button>
+        <button type="button" id="btn-en" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="menu-btn" type="button" aria-controls="menu" aria-expanded="false" data-i="menu">Menu</button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="page-hero"><div class="wrap">
+    <div class="label" data-i="pd-l">Diensten</div>
+    <h1 data-i="pd-h">Van strategie tot dagelijkse praktijk</h1>
+    <p data-i="pd-p">Vier manieren waarop ik organisaties help, los of in samenhang. Altijd op maat en binnen de Europese regels.</p>
+  </div></div>
+  <section id="diensten">
+    <div class="wrap split reveal">
+      <div><div class="label" data-i="d-label">Diensten</div><h2 data-i="d-h">Van strategie tot dagelijkse praktijk</h2></div>
+      <div>
+        <p class="lead" data-i="d-lead">AI is een middel, geen doel. Soms is een beter proces de grootste winst, soms een slimme automatisering. Ik kijk naar wat jouw organisatie nodig heeft.</p>
+        <div class="svc">
+          <div><h3 data-i="sv1h">Strategie en richting</h3><p data-i="sv1">Waar wil je naartoe, en welke rol spelen data en AI daarin? Een heldere koers, prioriteiten en een realistische roadmap, op directieniveau.</p></div>
+          <div><h3 data-i="sv2h">Procesoptimalisatie</h3><p data-i="sv2">Processen in kaart brengen, knelpunten oplossen en standaardiseren. Ook als daar geen AI aan te pas komt.</p></div>
+          <div><h3 data-i="sv3h">Implementatie en automatisering</h3><p data-i="sv3">Oplossingen bouwen en invoeren die werk overnemen, gekoppeld aan je bestaande systemen en met de mens in de regie.</p></div>
+          <div><h3 data-i="sv4h">AI in de organisatie verankeren</h3><p data-i="sv4">De juiste tools kiezen, praktische tips en training, zodat medewerkers AI veilig en zelfstandig gebruiken in hun dagelijkse werk.</p></div>
+        </div>
+        <p class="note"><b data-i="n-b">Altijd:</b> <span data-i="n">compliance met de AVG en de Europese AI Act, aandacht voor security en duidelijke afspraken over wie wat beslist.</span></p>
+      </div>
+    </div>
+  </section>  <section id="praktijk">
+    <div class="wrap split reveal">
+      <div><div class="label" data-i="t-label">Uit de praktijk</div><h2 data-i="t-h">Wat het oplevert</h2></div>
+      <div>
+        <div class="feature">
+          <div class="label" data-i="ft-label">Uitgelicht</div>
+          <h3 data-i="ft-h">Een interne AI-collega</h3>
+          <div class="case-big">
+            <div><h4 data-i="cv-h">Vraag</h4><p data-i="cv">Medewerkers zochten informatie bij elkaar uit verschillende systemen. Dat kostte tijd en hing af van wie wat wist.</p></div>
+            <div><h4 data-i="ca-h">Aanpak</h4><p data-i="ca">Een AI-assistent die werkt met de eigen data van de organisatie, binnen het eigen domein. Collega's stellen een vraag in gewone taal en krijgen een onderbouwd antwoord.</p></div>
+            <div><h4 data-i="cr-h">Resultaat</h4><p data-i="cr">Sneller inzicht, beter voorbereide gesprekken, en klanten die proactief worden geïnformeerd. Kansen en problemen komen eerder in beeld.</p></div>
+          </div>
+        </div>
+        <div class="cases">
+          <div class="case"><h3 data-i="c1h">Documenten en facturen</h3><p data-i="c1">Facturen uit de mailbox uitlezen en omzetten in een voorstel dat een medewerker controleert en verwerkt.</p></div>
+          <div class="case"><h3 data-i="c2h">Mailbox en verzoeken</h3><p data-i="c2">Inzicht in wat er binnenkomt, en berichten automatisch bij de juiste persoon of het juiste proces.</p></div>
+          <div class="case"><h3 data-i="c3h">Controles en afwijkingen</h3><p data-i="c3">Gegevens uit verschillende systemen koppelen, zodat afwijkingen opvallen en de rest vanzelf loopt.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="band"><div class="wrap">
+    <div><h2 data-i="db-h">Benieuwd wat past bij jouw organisatie?</h2><p data-i="db-p">In een eerste gesprek kijken we waar de meeste winst zit. Vrijblijvend.</p></div>
+    <div class="actions"><a class="btn solid" href="over.html#contact" data-i="db-b1">Plan een kennismaking</a><a class="btn line" href="quickscan.html" data-i="db-b2">Doe eerst de quickscan</a></div>
+  </div></section>
+
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Proficia · Erik van Setten · Ede</span>
+    <span><span data-i="foot">KvK 42189233 · btw NL005570911B10</span> · <a href="privacy.html" data-i="priv">Privacy</a></span>
+  </div>
+</footer>
+
+<script>
+var FORM_ENDPOINT = 'https://formsubmit.co/ajax/evansetten@proficia.nl';
+var BOOKING_URL = '';
+var EN = {"eyebrow": "Proficia · Strategy, processes and AI", "h1a": "AI where it can.", "h1b": "People where it matters.", "lede": "I help organisations shape their processes and their use of AI so that people work faster and better. From strategy to implementation, tailored and always within European rules.", "cta1": "Schedule an introduction", "cta2": "See the foundation", "focus": "What you can expect", "e1h": "Overview", "e1": "The whole chain in view before anything gets built", "e2h": "A working solution", "e2": "Not a report, but something that runs in practice", "e3h": "Responsible", "e3": "GDPR, AI Act and security from the first step", "e4h": "Together", "e4": "Tailored, in partnership with your own people", "cta3": "Take the AI quick scan", "d-label": "Services", "d-h": "From strategy to daily practice", "d-lead": "AI is a means, not an end. Sometimes a better process is the biggest gain, sometimes smart automation. I look at what your organisation needs.", "sv1h": "Strategy and direction", "sv1": "Where do you want to go, and what role do data and AI play? A clear course, priorities and a realistic roadmap, at executive level.", "sv2h": "Process optimisation", "sv2": "Mapping processes, solving bottlenecks and standardising. Even when no AI is involved.", "sv3h": "Implementation and automation", "sv3": "Building and introducing solutions that take over work, connected to your existing systems and with people in control.", "sv4h": "Embedding AI in the organisation", "sv4": "Choosing the right tools, practical tips and training, so employees use AI safely and independently in their daily work.", "n-b": "Always:", "n": "compliance with the GDPR and the European AI Act, attention to security and clear agreements on who decides what.", "t-label": "In practice", "t-h": "What it delivers", "ft-label": "Featured", "ft-h": "An internal AI colleague", "cv-h": "Question", "cv": "Employees gathered information from several systems. It took time and depended on who knew what.", "ca-h": "Approach", "ca": "An AI assistant that works with the organisation's own data, within its own domain. Colleagues ask a question in plain language and get a well-founded answer.", "cr-h": "Result", "cr": "Faster insight, better prepared conversations, and customers who are informed proactively. Opportunities and problems surface earlier.", "c1h": "Documents and invoices", "c1": "Reading invoices from the inbox and turning them into a proposal that an employee checks and processes.", "c2h": "Inbox and requests", "c2": "Insight into what comes in, with messages routed automatically to the right person or process.", "c3h": "Checks and exceptions", "c3": "Connecting data from different systems, so exceptions stand out and the rest runs by itself.", "tr-label": "Training", "tr-h": "AI in practice", "tr-lead": "A half-day session in which your team learns to use AI safely and sensibly, practising on their own work. You finish with three concrete applications for your processes, and a demonstrable step towards the AI literacy the AI Act asks of organisations.", "tf1h": "Duration", "tf1": "4 hours, at your location", "tf2h": "Group", "tf2": "6 to 12 participants", "tf3h": "Prior knowledge", "tf3": "Not needed", "ag1h": "What AI can and cannot do", "ag1": "How it works, where it is strong and where it makes mistakes.", "ag2h": "Safe and within the rules", "ag2": "Which data is and is not allowed, GDPR and the AI Act in plain language.", "ag3h": "Asking good questions", "ag3": "Practising on your own tasks: emails, reports, summaries and analyses.", "ag4h": "From task to process", "ag4": "Where is the manual work, and where does AI help and where does it not?", "ag5h": "Choose and agree", "ag5": "Together choose a top 3 of applications, each with an owner and a first step.", "tv1h": "Standard", "tv1": "Intake call, the session itself and a summary with your top 3 applications.", "tv1p": "€ 1,750 excl. VAT", "tv2h": "Tailored", "tv2": "Standard plus short interviews with employees beforehand, so we practise on their real tasks.", "tv2p": "€ 2,450 excl. VAT", "tr-cta": "Request the training", "a-label": "Approach", "a-h": "Technology follows the goal", "a-lead": "There is no generic solution. Every organisation has its own processes, data and people. That is why every assignment is tailored, and always a partnership.", "p1h": "People in control", "p1": "AI does the groundwork; people review, decide and keep the overview. Human in the loop, by design.", "p2h": "Understand the destination first", "p2": "Goal, process and exceptions are clear before anything gets built.", "p3h": "End-to-end overview", "p3": "The whole chain in view, not optimising one part at the expense of the rest.", "p4h": "The right model for each task", "p4": "Different models and tools, chosen for what works, what it costs and what your organisation can handle.", "p5h": "Always tailored", "p5": "No standard package, but a solution that fits your processes and ambition.", "p6h": "Together, with your own people", "p6": "I work alongside your team, so knowledge and ownership stay in your organisation.", "c-label": "Responsible", "c-h": "Within European rules", "c-lead": "Compliance is not an afterthought but a design choice from the first step. That way a good solution never has to be rolled back later.", "co1h": "GDPR", "co1": "Only the data that is needed, with clear agreements on processing and retention.", "co2h": "EU AI Act", "co2": "Insight into the risk class of an application, documentation and AI literacy of employees.", "co3h": "Security", "co3": "Role-based access, logging and as much as possible within your own environment.", "co4h": "Governance", "co4": "Who owns it, who approves and how it stays manageable as it grows.", "o-label": "About Proficia", "o-h": "From the shop floor to the boardroom", "oq": "“The biggest gains are not in the smartest technology, but in understanding how the work really gets done.”", "o1": "Proficia is the practice of Erik van Setten. I have worked in operations, management and at board level, up to and including the role of managing director. That means I know the work from every angle: day-to-day execution, leading teams, stakeholder management, strategy and steering change programmes.", "o2": "I bring that experience to every assignment: listening, overseeing the chain and working with the people who do the work towards a solution that keeps working. Direct and honest, even when that means AI is not the best choice somewhere.", "m1h": "Experience", "m1": "From operations to director and MD", "m4h": "Strengths", "m4": "Stakeholder management, leadership and change", "m3h": "Based in", "li": "View my LinkedIn profile", "k-h": "Let’s talk", "k-lead": "Tell me briefly what you are working on. I will get back to you within two working days for a first, no-obligation conversation.", "fl1": "Name", "fl2": "Organisation", "fl3": "Email", "fl4": "Phone (optional)", "fl5": "Topic", "o1x": "Introduction", "o2x": "Strategy and direction", "o3x": "Process optimisation", "o4x": "Implementation and automation", "o5x": "Embedding AI in the organisation", "o6x": "Training AI in practice", "fl6": "Message", "ph:msg": "What are you running into, or what do you want to achieve?", "consent": "I only use your details to contact you about your question. Read the <a href=\"privacy.html\">privacy statement</a> (Dutch).", "send": "Send message", "book": "Book a meeting directly", "k1": "Phone", "copy1": "Copy", "copy2": "Copy", "o7x": "Discuss my AI quick scan", "foot": "Chamber of Commerce 42189233 · VAT NL005570911B10", "priv": "Privacy", "f-label": "The foundation", "f-h": "Good AI starts at the bottom", "f-lead": "A good result is built from fixed building blocks that rest on one another. Without good, structured data you cannot expect a good outcome, however clever the model. That is why I always build from the bottom up.", "cap1": "Result", "cap2": "Build from the bottom up", "l5h": "People and results", "l5": "Better decisions, less manual work and employees who embrace the solution.", "l4h": "AI and automation", "l4": "The right model or tool for each task, with a human in the loop and connected to the systems you already use.", "l3h": "Processes", "l3": "Clear, standardised ways of working. Automating a messy process only produces mess faster.", "l2h": "Data and knowledge", "l2": "The starting point of every application: reliable data from your own systems, and the knowledge that now lives in people’s heads, such as ways of working, agreements and exceptions.", "l1h": "Governance, compliance and security", "l1": "Who may see and decide what, and how do you comply with the GDPR and the AI Act? This layer carries everything above it.", "o-lead": "Then you take it outward, in small, controlled steps:", "so1h": "1. Within your own domain", "so1": "First internally, with your own data and people.", "so2h": "2. Proven in practice", "so2": "Alongside the current way of working, until it demonstrably works, measured against criteria agreed in advance.", "so3h": "3. To customers and partners", "so3": "Only then outwards, step by step and under control.", "o-after": "After that, you keep measuring and adjusting. An AI solution is never ‘finished’.", "lpd-h": "What I do", "lpd-l5": "Training, handover and measuring whether it works.", "lpv-h": "Example", "lpv-l5": "After three months demonstrably less manual work, in hours per week, and a team that suggests improvements itself.", "lpd-l4": "Choosing the right model or tool per task, connecting it to your existing systems, keeping people in the loop.", "lpv-l4": "Having invoices read from the inbox automatically; an employee checks and approves.", "lpd-l3": "Mapping processes as they really run, solving bottlenecks and standardising.", "lpv-l3": "Reducing a check that was done five different ways to one fixed route, before anything is automated.", "lpd-l2": "Mapping sources, measuring quality and capturing the knowledge in people’s heads.", "lpv-l2": "Capturing the way of working of a departing colleague in a knowledge base that an AI colleague later uses.", "lpd-l1": "Ground rules for AI use, roles and permissions, and checks against the GDPR and the AI Act.", "lpv-l1": "A one-page AI policy everyone knows, and an overview of all AI applications with an owner.", "f-hint": "Click a layer to see what it involves and an example.", "w-label": "How I work", "w-h": "Start small, prove it works", "w-lead": "Every assignment goes through the same four steps. You always know where you stand and what it delivers.", "s1h": "Understand", "s1": "Capture the process and data as they really are, including the exceptions. That knowledge stays in your organisation.", "s2h": "Start small", "s2": "Choose one process with a lot of manual work and a clear gain, and make a first version for it.", "s3h": "Run side by side", "s3": "The solution runs alongside the current way of working until the outcome is right week after week.", "s4h": "Hand over", "s4": "Your team takes over, with a work instruction, training and a fixed place for the exceptions.", "st1": "Step 1", "st2": "Step 2", "st3": "Step 3", "st4": "Step 4", "h-d-label": "What I do", "h-d-h": "From strategy to daily practice", "h-d-lead": "AI is a means, not an end. Sometimes a better process is the biggest gain, sometimes smart automation.", "ts1": "A clear course and a realistic roadmap, at executive level.", "more": "Read more →", "ts2": "Solving bottlenecks and standardising, even without AI.", "ts3": "Solutions that take over work, with people in control.", "ts4h": "Training: AI in practice", "ts4": "A half-day session in which your team learns to use AI safely and sensibly.", "h-more-cases": "More examples →", "qb-b2": "Or schedule an introduction", "qb-h": "Where does your organisation stand?", "qb-p": "Eight short questions, your result per layer of the foundation straight away. Your answers stay in your own browser.", "qb-b1": "Start the quick scan", "pd-l": "Services", "pd-h": "From strategy to daily practice", "pd-p": "Four ways I help organisations, separately or together. Always tailored and within European rules.", "db-b2": "Take the quick scan first", "db-h": "Curious what fits your organisation?", "db-p": "In a first conversation we look at where the biggest gain is. No obligation.", "db-b1": "Schedule an introduction", "pa-l": "Approach", "pa-h": "Foundation first, then technology", "pa-p": "How I work: building from the bottom up, people in control, and starting small until it demonstrably works.", "ab-h": "Which layer needs attention in your organisation?", "ab-p": "The quick scan shows you in a few minutes.", "ab-b1": "Start the quick scan", "pt-l": "Training", "pt-h": "AI in practice", "pt-p": "A half-day session for your team, practising on their own work, with three concrete applications as the result.", "tr-label2": "Programme and price", "tr-h2": "What you get", "tb-h": "A training for your team?", "tb-p": "Tell me how many people and what you do, and I will tailor the programme.", "tb-b1": "Request the training", "po-l": "About Proficia", "po-h": "From the shop floor to the boardroom", "po-p": "Proficia is the practice of Erik van Setten: senior experience in operations, management and leadership, applied to responsible AI.", "o-label2": "Erik van Setten", "o-h2": "Who you will talk to", "pq-l": "AI quick scan", "pq-h": "Where does your organisation stand?", "pq-p": "Eight short questions about the five layers of the foundation. You will immediately see where you stand and what a logical first step is. Your answers are not stored or sent.", "qs-back": "← Previous", "qs-r-l": "Your result", "qs-c": "Discuss your result", "qs-again": "Start over", "qs-note": "This is a first indication based on eight questions, not a full analysis.", "nav1": "Services", "nav3": "Approach", "nav7": "Training", "nav5": "About", "nav6": "Contact", "navqs": "AI quick scan", "menu": "Menu"};
+var NL = {"eyebrow": "Proficia · Strategie, processen en AI", "h1a": "AI waar het kan.", "h1b": "De mens waar het moet.", "lede": "Ik help organisaties hun processen en de inzet van AI zo in te richten dat mensen er sneller en beter door werken. Van strategie tot implementatie, op maat en altijd binnen de Europese regels.", "cta1": "Plan een kennismaking", "cta2": "Bekijk het fundament", "focus": "Wat je van mij kunt verwachten", "e1h": "Overzicht", "e1": "De hele keten in beeld voordat er iets wordt gebouwd", "e2h": "Een werkende oplossing", "e2": "Geen rapport, maar iets dat in de praktijk draait", "e3h": "Verantwoord", "e3": "AVG, AI Act en security vanaf de eerste stap", "e4h": "Samen", "e4": "Maatwerk, in samenwerking met je eigen mensen", "cta3": "Doe de AI-quickscan", "d-label": "Diensten", "d-h": "Van strategie tot dagelijkse praktijk", "d-lead": "AI is een middel, geen doel. Soms is een beter proces de grootste winst, soms een slimme automatisering. Ik kijk naar wat jouw organisatie nodig heeft.", "sv1h": "Strategie en richting", "sv1": "Waar wil je naartoe, en welke rol spelen data en AI daarin? Een heldere koers, prioriteiten en een realistische roadmap, op directieniveau.", "sv2h": "Procesoptimalisatie", "sv2": "Processen in kaart brengen, knelpunten oplossen en standaardiseren. Ook als daar geen AI aan te pas komt.", "sv3h": "Implementatie en automatisering", "sv3": "Oplossingen bouwen en invoeren die werk overnemen, gekoppeld aan je bestaande systemen en met de mens in de regie.", "sv4h": "AI in de organisatie verankeren", "sv4": "De juiste tools kiezen, praktische tips en training, zodat medewerkers AI veilig en zelfstandig gebruiken in hun dagelijkse werk.", "n-b": "Altijd:", "n": "compliance met de AVG en de Europese AI Act, aandacht voor security en duidelijke afspraken over wie wat beslist.", "t-label": "Uit de praktijk", "t-h": "Wat het oplevert", "ft-label": "Uitgelicht", "ft-h": "Een interne AI-collega", "cv-h": "Vraag", "cv": "Medewerkers zochten informatie bij elkaar uit verschillende systemen. Dat kostte tijd en hing af van wie wat wist.", "ca-h": "Aanpak", "ca": "Een AI-assistent die werkt met de eigen data van de organisatie, binnen het eigen domein. Collega's stellen een vraag in gewone taal en krijgen een onderbouwd antwoord.", "cr-h": "Resultaat", "cr": "Sneller inzicht, beter voorbereide gesprekken, en klanten die proactief worden geïnformeerd. Kansen en problemen komen eerder in beeld.", "c1h": "Documenten en facturen", "c1": "Facturen uit de mailbox uitlezen en omzetten in een voorstel dat een medewerker controleert en verwerkt.", "c2h": "Mailbox en verzoeken", "c2": "Inzicht in wat er binnenkomt, en berichten automatisch bij de juiste persoon of het juiste proces.", "c3h": "Controles en afwijkingen", "c3": "Gegevens uit verschillende systemen koppelen, zodat afwijkingen opvallen en de rest vanzelf loopt.", "tr-label": "Training", "tr-h": "AI in de praktijk", "tr-lead": "Een dagdeel waarin je team leert AI veilig en zinvol te gebruiken, met het eigen werk als oefenmateriaal. Je sluit af met drie concrete toepassingen voor jullie processen, en een aantoonbare stap in de AI-geletterdheid die de AI Act van organisaties vraagt.", "tf1h": "Duur", "tf1": "4 uur, bij jullie op locatie", "tf2h": "Groep", "tf2": "6 tot 12 deelnemers", "tf3h": "Voorkennis", "tf3": "Niet nodig", "ag1h": "Wat AI wel en niet kan", "ag1": "Hoe het werkt, waar het sterk is en waar het fouten maakt.", "ag2h": "Veilig en binnen de regels", "ag2": "Welke gegevens wel en niet, de AVG en de AI Act in gewone taal.", "ag3h": "Goed vragen stellen", "ag3": "Oefenen met eigen taken: mails, verslagen, samenvattingen en analyses.", "ag4h": "Van taak naar proces", "ag4": "Waar zit het handwerk, en waar helpt AI wel en waar juist niet?", "ag5h": "Kiezen en vastleggen", "ag5": "Samen een top 3 toepassingen kiezen, met eigenaar en eerste stap.", "tv1h": "Basis", "tv1": "Intakegesprek, het dagdeel zelf en een samenvatting met jullie top 3 toepassingen.", "tv1p": "€ 1.750 excl. btw", "tv2h": "Op maat", "tv2": "Basis plus korte gesprekken met medewerkers vooraf, zodat we oefenen op hun echte taken.", "tv2p": "€ 2.450 excl. btw", "tr-cta": "Vraag de training aan", "a-label": "Aanpak", "a-h": "Technologie volgt het doel", "a-lead": "Er bestaat geen generieke oplossing. Elke organisatie heeft haar eigen processen, data en mensen. Daarom is elke opdracht maatwerk, en altijd een samenwerking.", "p1h": "De mens in de regie", "p1": "AI doet het voorwerk; mensen beoordelen, beslissen en houden het overzicht. Human in the loop, vanaf het ontwerp.", "p2h": "Eerst begrijpen waar het heen moet", "p2": "Doel, proces en uitzonderingen zijn helder voordat er iets wordt gebouwd.", "p3h": "End-to-end overzicht", "p3": "De hele keten in beeld, niet één los onderdeel optimaliseren ten koste van de rest.", "p4h": "Het juiste model voor elke taak", "p4": "Verschillende modellen en tools, gekozen op wat werkt, wat het kost en wat je organisatie aankan.", "p5h": "Altijd maatwerk", "p5": "Geen standaardpakket, maar een oplossing die past bij jouw processen en ambitie.", "p6h": "Samen, met je eigen mensen", "p6": "Ik werk naast je team, zodat de kennis en het eigenaarschap in je organisatie blijven.", "c-label": "Verantwoord", "c-h": "Binnen de Europese regels", "c-lead": "Compliance is geen sluitstuk, maar een ontwerpkeuze vanaf de eerste stap. Zo voorkom je dat een goede oplossing later moet worden teruggedraaid.", "co1h": "AVG", "co1": "Alleen de gegevens die nodig zijn, met duidelijke afspraken over verwerking en bewaren.", "co2h": "EU AI Act", "co2": "Inzicht in de risicoklasse van een toepassing, documentatie en AI-geletterdheid van medewerkers.", "co3h": "Security", "co3": "Toegang op basis van rollen, logging en zo veel mogelijk binnen je eigen omgeving.", "co4h": "Governance", "co4": "Wie is eigenaar, wie keurt goed en hoe blijft het beheersbaar als het groeit.", "o-label": "Over Proficia", "o-h": "Van de werkvloer tot de directietafel", "oq": "“De meeste winst zit niet in de slimste technologie, maar in begrijpen hoe het werk echt gaat.”", "o1": "Proficia is de praktijk van Erik van Setten. Ik heb gewerkt in operations, management en directie, tot en met de rol van managing director. Daardoor ken ik het werk van alle kanten: de dagelijkse uitvoering, leidinggeven aan teams, stakeholdermanagement, strategie en het sturen van verandertrajecten.", "o2": "Die ervaring neem ik mee in elke opdracht: luisteren, de keten overzien en samen met de mensen die het werk doen tot een oplossing komen die blijft werken. Direct en eerlijk, ook als dat betekent dat AI ergens niet de beste keuze is.", "m1h": "Ervaring", "m1": "Van operations tot directie en MD", "m4h": "Sterk in", "m4": "Stakeholdermanagement, leiderschap en verandering", "m3h": "Vestiging", "li": "Bekijk mijn profiel op LinkedIn", "k-h": "Laten we kennismaken", "k-lead": "Vertel kort waar je mee bezig bent. Ik neem binnen twee werkdagen contact met je op voor een vrijblijvend eerste gesprek.", "fl1": "Naam", "fl2": "Organisatie", "fl3": "E-mail", "fl4": "Telefoon (optioneel)", "fl5": "Onderwerp", "o1x": "Kennismaking", "o2x": "Strategie en richting", "o3x": "Procesoptimalisatie", "o4x": "Implementatie en automatisering", "o5x": "AI in de organisatie verankeren", "o6x": "Training AI in de praktijk", "fl6": "Bericht", "ph:msg": "Waar loop je tegenaan, of wat wil je bereiken?", "consent": "Je gegevens gebruik ik alleen om contact met je op te nemen over je vraag. Lees de <a href=\"privacy.html\">privacyverklaring</a>.", "send": "Verstuur bericht", "book": "Plan direct een afspraak", "k1": "Telefoon", "copy1": "Kopieer", "copy2": "Kopieer", "o7x": "Uitslag AI-quickscan bespreken", "foot": "KvK 42189233 · btw NL005570911B10", "priv": "Privacy", "f-label": "Het fundament", "f-h": "Goede AI begint onderaan", "f-lead": "Een goed resultaat bouw je op uit vaste bouwstenen, die op elkaar steunen. Zonder goede, gestructureerde data kun je geen goede uitkomst verwachten, hoe slim het model ook is. Daarom bouw ik altijd van onder naar boven.", "cap1": "Resultaat", "cap2": "Bouw van onder naar boven", "l5h": "Mensen en resultaat", "l5": "Betere beslissingen, minder handwerk en medewerkers die de oplossing omarmen.", "l4h": "AI en automatisering", "l4": "Het juiste model of de juiste tool per taak, met de mens in de loop en gekoppeld aan de systemen die je al gebruikt.", "l3h": "Processen", "l3": "Heldere, gestandaardiseerde werkwijzen. Een rommelig proces automatiseren levert sneller rommel op.", "l2h": "Data en kennis", "l2": "Het startpunt van elke toepassing: betrouwbare gegevens uit je eigen systemen, én de kennis die nu nog in hoofden zit, zoals werkwijzen, afspraken en uitzonderingen.", "l1h": "Governance, compliance en security", "l1": "Wie mag wat zien en beslissen, en hoe voldoe je aan de AVG en de AI Act? Deze laag draagt alles erboven.", "o-lead": "Daarna breng je het gecontroleerd en in kleine stappen naar buiten:", "so1h": "1. Binnen het eigen domein", "so1": "Eerst intern, met eigen data en eigen mensen.", "so2h": "2. Bewezen in de praktijk", "so2": "Naast de huidige werkwijze, tot het aantoonbaar klopt, gemeten aan vooraf afgesproken criteria.", "so3h": "3. Naar klanten en partners", "so3": "Pas dan richting buiten, stap voor stap en beheerst.", "o-after": "Daarna blijf je meten en bijsturen. Een AI-oplossing is nooit ‘af’.", "lpd-h": "Wat ik doe", "lpd-l5": "Training, overdracht en meten of het werkt.", "lpv-h": "Voorbeeld", "lpv-l5": "Na drie maanden aantoonbaar minder handwerk, in uren per week, en een team dat zelf verbeteringen voorstelt.", "lpd-l4": "Per taak het juiste model of de juiste tool kiezen, koppelen aan je bestaande systemen, de mens in de loop houden.", "lpv-l4": "Facturen uit de mailbox automatisch laten uitlezen; een medewerker controleert en keurt goed.", "lpd-l3": "Processen uittekenen zoals ze echt lopen, knelpunten oplossen en standaardiseren.", "lpv-l3": "Een controle die op vijf manieren werd gedaan terugbrengen naar één vaste route, vóórdat er iets wordt geautomatiseerd.", "lpd-l2": "Bronnen in kaart brengen, de kwaliteit meten en de kennis uit hoofden vastleggen.", "lpv-l2": "De werkwijze van een vertrekkende collega vastleggen in een kennisbank die later een AI-collega gebruikt.", "lpd-l1": "Spelregels voor AI-gebruik, rollen en rechten, en toetsing aan de AVG en de AI Act.", "lpv-l1": "Een AI-beleid van één A4 dat iedereen kent, en een overzicht van alle AI-toepassingen met eigenaar.", "f-hint": "Klik op een laag voor wat erbij hoort en een voorbeeld.", "w-label": "Werkwijze", "w-h": "Klein beginnen, aantoonbaar opleveren", "w-lead": "Elke opdracht doorloopt dezelfde vier stappen. Zo weet je steeds waar je staat en wat het oplevert.", "s1h": "Begrijpen", "s1": "Het proces en de data vastleggen zoals ze werkelijk zijn, inclusief de uitzonderingen. Die kennis blijft in je organisatie.", "s2h": "Klein beginnen", "s2": "Eén proces kiezen met veel handwerk en een duidelijke winst, en daar een eerste versie voor maken.", "s3h": "Naast elkaar draaien", "s3": "De oplossing draait mee met de huidige werkwijze, tot de uitkomst weken achter elkaar klopt.", "s4h": "Overdragen", "s4": "Je team neemt het over, met een werkbeschrijving, training en een vaste plek voor de uitzonderingen.", "st1": "Stap 1", "st2": "Stap 2", "st3": "Stap 3", "st4": "Stap 4", "h-d-label": "Wat ik doe", "h-d-h": "Van strategie tot dagelijkse praktijk", "h-d-lead": "AI is een middel, geen doel. Soms is een beter proces de grootste winst, soms een slimme automatisering.", "ts1": "Een heldere koers en een realistische roadmap, op directieniveau.", "more": "Lees meer →", "ts2": "Knelpunten oplossen en standaardiseren, ook zonder AI.", "ts3": "Oplossingen die werk overnemen, met de mens in de regie.", "ts4h": "Training AI in de praktijk", "ts4": "Een dagdeel waarin je team AI veilig en zinvol leert gebruiken.", "h-more-cases": "Meer voorbeelden →", "qb-b2": "Of plan een kennismaking", "qb-h": "Waar staat jouw organisatie?", "qb-p": "Acht korte vragen, direct je uitslag per laag van het fundament. Je antwoorden blijven in je eigen browser.", "qb-b1": "Start de quickscan", "pd-l": "Diensten", "pd-h": "Van strategie tot dagelijkse praktijk", "pd-p": "Vier manieren waarop ik organisaties help, los of in samenhang. Altijd op maat en binnen de Europese regels.", "db-b2": "Doe eerst de quickscan", "db-h": "Benieuwd wat past bij jouw organisatie?", "db-p": "In een eerste gesprek kijken we waar de meeste winst zit. Vrijblijvend.", "db-b1": "Plan een kennismaking", "pa-l": "Aanpak", "pa-h": "Eerst het fundament, dan de techniek", "pa-p": "Hoe ik werk: van onder naar boven bouwen, de mens in de regie, en klein beginnen tot het aantoonbaar werkt.", "ab-h": "Welke laag vraagt bij jou aandacht?", "ab-p": "De quickscan laat het in een paar minuten zien.", "ab-b1": "Start de quickscan", "pt-l": "Training", "pt-h": "AI in de praktijk", "pt-p": "Een dagdeel voor je team, met het eigen werk als oefenmateriaal en drie concrete toepassingen als resultaat.", "tr-label2": "Programma en prijs", "tr-h2": "Wat je krijgt", "tb-h": "Een training voor jouw team?", "tb-p": "Laat weten hoeveel mensen en wat jullie doen, dan stem ik het programma af.", "tb-b1": "Vraag de training aan", "po-l": "Over Proficia", "po-h": "Van de werkvloer tot de directietafel", "po-p": "Proficia is de praktijk van Erik van Setten: senior ervaring in operations, management en directie, ingezet voor verantwoorde AI.", "o-label2": "Erik van Setten", "o-h2": "Wie je spreekt", "pq-l": "AI-quickscan", "pq-h": "Waar staat jouw organisatie?", "pq-p": "Acht korte vragen over de vijf lagen van het fundament. Je ziet direct waar je staat en wat een logische eerste stap is. Je antwoorden worden niet opgeslagen of verstuurd.", "qs-back": "← Vorige", "qs-r-l": "Je uitslag", "qs-c": "Bespreek je uitslag", "qs-again": "Opnieuw", "qs-note": "Dit is een eerste indicatie op basis van acht vragen, geen volledige analyse.", "nav1": "Diensten", "nav3": "Aanpak", "nav7": "Training", "nav5": "Over", "nav6": "Contact", "navqs": "AI-quickscan", "menu": "Menu"};
+var MSG = {"nl": {"missing": "Vul je naam, e-mailadres en bericht in.", "mail": "Controleer je e-mailadres.", "sending": "Bezig met versturen…", "ok": "Dank je wel. Je bericht is verstuurd; ik neem binnen twee werkdagen contact met je op.", "err": "Versturen lukte niet. Mail of bel me gerust direct via de gegevens hiernaast."}, "en": {"missing": "Please fill in your name, email address and message.", "mail": "Please check your email address.", "sending": "Sending…", "ok": "Thank you. Your message has been sent; I will get back to you within two working days.", "err": "Sending failed. Feel free to email or call me directly using the details alongside."}};
+var QS = {"q": [{"layer": "gov", "nl": "Zijn er afspraken over welke AI-tools medewerkers mogen gebruiken en welke gegevens erin mogen?", "en": "Are there agreements on which AI tools employees may use and which data may go into them?", "opts": [["Nee, nog niet", "No, not yet"], ["Mondeling, niet vastgelegd", "Verbally, not written down"], ["Vastgelegd, maar niet iedereen kent ze", "Written down, but not everyone knows them"], ["Vastgelegd en bij iedereen bekend", "Written down and known to everyone"]]}, {"layer": "gov", "nl": "Is duidelijk wie eigenaar is van data en AI-toepassingen, en wie goedkeurt?", "en": "Is it clear who owns data and AI applications, and who approves?", "opts": [["Nee", "No"], ["Deels, per afdeling verschillend", "Partly, it differs per department"], ["Grotendeels", "Largely"], ["Ja, vastgelegd", "Yes, written down"]]}, {"layer": "data", "nl": "Hoe betrouwbaar zijn de gegevens in jullie belangrijkste systemen?", "en": "How reliable is the data in your main systems?", "opts": [["Veel handwerk en correcties", "Lots of manual work and corrections"], ["Redelijk, met bekende gaten", "Reasonable, with known gaps"], ["Goed, op een paar uitzonderingen na", "Good, with a few exceptions"], ["Betrouwbaar en actueel", "Reliable and up to date"]]}, {"layer": "data", "nl": "Waar zit de kennis over hoe het werk echt gaat?", "en": "Where does the knowledge of how the work really gets done live?", "opts": [["Vooral in de hoofden van een paar mensen", "Mostly in the heads of a few people"], ["Deels vastgelegd, verspreid over plekken", "Partly written down, spread across places"], ["Grotendeels vastgelegd", "Largely written down"], ["Vastgelegd, actueel en vindbaar", "Written down, current and easy to find"]]}, {"layer": "proc", "nl": "Hoe gestandaardiseerd zijn jullie belangrijkste processen?", "en": "How standardised are your main processes?", "opts": [["Iedereen doet het op zijn eigen manier", "Everyone does it their own way"], ["Er is een lijn, met veel uitzonderingen", "There is a line, with many exceptions"], ["Grotendeels standaard", "Largely standard"], ["Standaard en beschreven", "Standard and documented"]]}, {"layer": "proc", "nl": "Hoeveel tijd gaat er naar overtypen, zoeken en controleren?", "en": "How much time goes into retyping, searching and checking?", "opts": [["Heel veel: dagelijks uren", "A lot: hours every day"], ["Flink: een paar uur per persoon per week", "Quite a bit: a few hours per person per week"], ["Beperkt", "Limited"], ["Vrijwel niets", "Hardly any"]]}, {"layer": "ai", "nl": "Hoe wordt AI nu gebruikt in jullie organisatie?", "en": "How is AI used in your organisation today?", "opts": [["Niet", "Not at all"], ["Individueel, op eigen initiatief", "Individually, on people’s own initiative"], ["In een paar teams, met afspraken", "In a few teams, with agreements"], ["Structureel, ingebouwd in processen", "Structurally, built into processes"]]}, {"layer": "ppl", "nl": "Hoe staan medewerkers tegenover AI?", "en": "How do employees feel about AI?", "opts": [["Onbekend of afwachtend", "Unfamiliar or wait-and-see"], ["Nieuwsgierig, maar onzeker", "Curious, but unsure"], ["Positief, met een paar voorlopers", "Positive, with a few front-runners"], ["Positief en actief betrokken", "Positive and actively involved"]]}], "lname": {"ppl": ["Mensen en resultaat", "People and results"], "ai": ["AI en automatisering", "AI and automation"], "proc": ["Processen", "Processes"], "data": ["Data en kennis", "Data and knowledge"], "gov": ["Governance, compliance en security", "Governance, compliance and security"]}, "advice": {"gov": {"h": ["Begin met spelregels", "Start with ground rules"], "p": ["Leg vast welke tools en welke gegevens wel en niet mogen, en wie beslist. Dat is snel geregeld, voorkomt risico’s en is de basis voor alles erboven. Een training is vaak de snelste start.", "Agree which tools and which data are and are not allowed, and who decides. It is quick to arrange, prevents risk and is the basis for everything above it. A training is often the fastest start."], "href": "training.html", "cta": ["Bekijk de training", "See the training"]}, "data": {"h": ["Breng data en kennis op orde", "Get your data and knowledge in order"], "p": ["Zonder betrouwbare gegevens en vastgelegde kennis levert ook het beste model geen goede uitkomst. Begin met vastleggen hoe het werk echt gaat, inclusief de uitzonderingen.", "Without reliable data and captured knowledge, even the best model will not give a good outcome. Start by capturing how the work really gets done, exceptions included."], "href": "diensten.html", "cta": ["Bekijk procesoptimalisatie", "See process optimisation"]}, "proc": {"h": ["Standaardiseer eerst één proces", "Standardise one process first"], "p": ["Kies één proces met veel handwerk en breng het terug naar één vaste route. Daar zit je eerste winst, en daarna wordt automatiseren eenvoudig.", "Choose one process with a lot of manual work and reduce it to one fixed route. That is your first gain, and automating becomes easy afterwards."], "href": "diensten.html", "cta": ["Bekijk procesoptimalisatie", "See process optimisation"]}, "ai": {"h": ["Je basis staat: begin klein met AI", "Your foundation is in place: start small with AI"], "p": ["Kies één proces met duidelijke winst en laat een eerste toepassing naast de huidige werkwijze draaien, tot de uitkomst aantoonbaar klopt.", "Choose one process with a clear gain and run a first application alongside the current way of working, until the outcome demonstrably works."], "href": "diensten.html", "cta": ["Bekijk implementatie", "See implementation"]}, "ppl": {"h": ["Neem je mensen mee", "Bring your people along"], "p": ["De techniek is het probleem niet. Een training met voorbeelden uit het eigen werk maakt van twijfel gebruik, en levert meteen ideeën op.", "Technology is not the issue. A training with examples from their own work turns doubt into use, and produces ideas straight away."], "href": "training.html", "cta": ["Bekijk de training", "See the training"]}}, "levels": [{"max": 35, "name": ["Startpunt", "Starting point"], "p": ["De basis vraagt eerst aandacht. Goed nieuws: daar is ook de meeste winst te halen.", "The foundation needs attention first. The good news: that is also where the biggest gain is."]}, {"max": 60, "name": ["Fundament leggen", "Laying the foundation"], "p": ["Er staat iets, maar er zijn duidelijke gaten. Dicht die eerst, dan wordt AI een versneller in plaats van een risico.", "Something is in place, but there are clear gaps. Close those first, and AI becomes an accelerator instead of a risk."]}, {"max": 80, "name": ["Klaar om op te bouwen", "Ready to build"], "p": ["Een goede basis. Je kunt gericht beginnen met de eerste toepassingen.", "A good foundation. You can start purposefully with the first applications."]}, {"max": 101, "name": ["Klaar om op te schalen", "Ready to scale"], "p": ["Sterk. De vraag is nu hoe je het breder en structureel inzet.", "Strong. The question now is how to apply it more broadly and structurally."]}]};
+var lang = 'nl';
+var onLang = [];
+function setLang(l){
+  lang = l;
+  var d = l === 'en' ? EN : NL;
+  document.querySelectorAll('[data-i]').forEach(function(el){ var v = d[el.dataset.i]; if (v) el.innerHTML = v; });
+  document.querySelectorAll('[data-ph]').forEach(function(el){ var v = d['ph:' + el.dataset.ph]; if (v) el.placeholder = v; });
+  document.documentElement.lang = l;
+  document.getElementById('btn-nl').setAttribute('aria-pressed', l === 'nl');
+  document.getElementById('btn-en').setAttribute('aria-pressed', l === 'en');
+  try { localStorage.setItem('proficia-lang', l); } catch(e){}
+  onLang.forEach(function(f){ f(); });
+}
+document.querySelectorAll('.lang button').forEach(function(b){
+  b.addEventListener('click', function(){ setLang(b.dataset.lang); });
+});
+
+// mobiel menu
+var mb = document.querySelector('.menu-btn'), menu = document.getElementById('menu');
+mb.addEventListener('click', function(){
+  var open = menu.classList.toggle('open'); mb.setAttribute('aria-expanded', open);
+});
+menu.addEventListener('click', function(e){ if (e.target.closest('a')) { menu.classList.remove('open'); mb.setAttribute('aria-expanded', false); } });
+
+// zachte entree
+var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+var rv = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window && !reduce) {
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
+  rv.forEach(function(el){ io.observe(el); });
+} else { rv.forEach(function(el){ el.classList.add('in'); }); }
+
+// interactief fundament
+document.querySelectorAll('.layer[aria-controls]').forEach(function(l){
+  function toggle(){
+    var p = document.getElementById(l.getAttribute('aria-controls')), open = l.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.layer[aria-expanded="true"]').forEach(function(o){ if (o !== l) { o.setAttribute('aria-expanded', 'false'); document.getElementById(o.getAttribute('aria-controls')).hidden = true; } });
+    l.setAttribute('aria-expanded', String(!open)); p.hidden = open;
+  }
+  l.addEventListener('click', toggle);
+  l.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+});
+
+// tijdlijn
+var tl = document.getElementById('timeline');
+if (tl) {
+  var steps = tl.querySelectorAll('li'), prog = tl.querySelector('.prog');
+  function tlUpdate(){
+    var r = tl.getBoundingClientRect(), vh = innerHeight;
+    var f = Math.max(0, Math.min(1, (vh * 0.85 - r.top) / (r.height + vh * 0.35)));
+    if (reduce) f = 1;
+    var n = Math.max(1, Math.ceil(f * steps.length - 0.01));
+    if (f === 0) n = 0;
+    steps.forEach(function(s, i){ s.classList.toggle('on', i < n); });
+    var pct = n ? ((n - 1) / (steps.length - 1)) * 100 : 0;
+    if (innerWidth <= 760) { prog.style.height = pct + '%'; prog.style.width = ''; } else { prog.style.width = pct + '%'; prog.style.height = ''; }
+  }
+  addEventListener('scroll', tlUpdate, { passive: true }); addEventListener('resize', tlUpdate); tlUpdate();
+}
+
+// contact
+if (BOOKING_URL) { var bk = document.getElementById('book'); if (bk) { bk.href = BOOKING_URL; bk.hidden = false; } }
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click', function(){
+    var el = document.getElementById(b.dataset.copy), tx = el.textContent, orig = b.textContent;
+    function done(){ b.textContent = lang === 'en' ? 'Copied' : 'Gekopieerd'; setTimeout(function(){ b.textContent = orig; }, 1600); }
+    try { navigator.clipboard.writeText(tx).then(done, function(){ sel(el); }); } catch(e){ sel(el); }
+  });
+});
+function sel(el){ var r=document.createRange(); r.selectNodeContents(el); var s=getSelection(); s.removeAllRanges(); s.addRange(r); }
+var form = document.getElementById('cform');
+if (form) {
+  var qp = new URLSearchParams(location.search);
+  if (qp.get('onderwerp')) { var so = form.onderwerp.querySelector('option[value="' + qp.get('onderwerp') + '"]'); if (so) form.onderwerp.value = qp.get('onderwerp'); }
+  try { var qr = sessionStorage.getItem('proficia-qs'); if (qr && qp.get('onderwerp') === 'Quickscan' && !form.bericht.value) form.bericht.value = qr; } catch(e){}
+  var st = document.getElementById('f-status'), btn = document.getElementById('f-send');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var m = MSG[lang];
+    var name = form.naam.value.trim(), mail = form.email.value.trim(), msg = form.bericht.value.trim();
+    st.className = 'status';
+    if (!name || !mail || !msg) { st.textContent = m.missing; st.classList.add('err'); return; }
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(mail)) { st.textContent = m.mail; st.classList.add('err'); return; }
+    if (form._honey.value) return;
+    btn.disabled = true; st.textContent = m.sending;
+    var data = { naam: name, organisatie: form.organisatie.value.trim(), email: mail, telefoon: form.telefoon.value.trim(),
+      onderwerp: form.onderwerp.value, bericht: msg, taal: lang,
+      _subject: 'Nieuw bericht via proficia.nl: ' + form.onderwerp.value, _replyto: mail, _template: 'table', _captcha: 'false' };
+    var gas = FORM_ENDPOINT.indexOf('script.google.com') > -1;
+    if (gas) data._honey = form._honey.value;
+    fetch(FORM_ENDPOINT, { method: 'POST', headers: gas ? { 'Content-Type': 'text/plain;charset=utf-8' } : { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) })
+      .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ if (!r.ok || j.success === 'false' || j.success === false) throw new Error('fail'); }); })
+      .then(function(){ st.textContent = m.ok; st.classList.add('ok'); form.reset(); })
+      .catch(function(){ st.textContent = m.err; st.classList.add('err'); })
+      .then(function(){ btn.disabled = false; });
+  });
+}
+
+// quickscan
+var qsEl = document.getElementById('qs');
+if (qsEl) {
+  var ans = [], cur = 0, ORDER = ['ppl', 'ai', 'proc', 'data', 'gov'];
+  var $ = function(id){ return document.getElementById(id); };
+  function L(o){ return o[lang === 'en' ? 1 : 0] !== undefined ? o[lang === 'en' ? 1 : 0] : o[lang]; }
+  function renderQ(){
+    var q = QS.q[cur];
+    $('qs-q').hidden = false; $('qs-res').hidden = true;
+    $('qs-prog').style.width = (cur / QS.q.length * 100) + '%';
+    $('qs-count').textContent = (lang === 'en' ? 'Question ' : 'Vraag ') + (cur + 1) + (lang === 'en' ? ' of ' : ' van ') + QS.q.length;
+    $('qs-title').textContent = q[lang];
+    $('qs-layer').textContent = (lang === 'en' ? 'Layer: ' : 'Laag: ') + L(QS.lname[q.layer]);
+    var box = $('qs-opts'); box.innerHTML = '';
+    q.opts.forEach(function(o, i){
+      var b = document.createElement('button'); b.type = 'button'; b.textContent = L(o);
+      b.setAttribute('aria-pressed', ans[cur] === i);
+      b.addEventListener('click', function(){ ans[cur] = i; if (cur < QS.q.length - 1) { cur++; renderQ(); } else { renderRes(); } });
+      box.appendChild(b);
+    });
+    $('qs-back').disabled = cur === 0;
+  }
+  function scores(){
+    var s = {}, c = {};
+    QS.q.forEach(function(q, i){ s[q.layer] = (s[q.layer] || 0) + (ans[i] || 0); c[q.layer] = (c[q.layer] || 0) + 3; });
+    var out = {}; ORDER.forEach(function(k){ out[k] = Math.round(s[k] / c[k] * 100); });
+    return out;
+  }
+  function renderRes(){
+    var sc = scores(), tot = 0; ORDER.forEach(function(k){ tot += sc[k]; }); tot = Math.round(tot / ORDER.length);
+    $('qs-q').hidden = true; $('qs-res').hidden = false; $('qs-prog').style.width = '100%';
+    var lv = QS.levels.filter(function(x){ return tot < x.max; })[0];
+    $('qs-level').textContent = L(lv.name) + ' · ' + tot + '%';
+    $('qs-levelp').textContent = L(lv.p);
+    var bars = $('qs-bars'); bars.innerHTML = '';
+    ORDER.forEach(function(k){
+      var d = document.createElement('div'); d.className = 'qs-bar' + (k === 'gov' ? ' base' : '');
+      d.innerHTML = '<b></b><span class="track"><i></i></span><em></em>';
+      d.querySelector('b').textContent = L(QS.lname[k]); d.querySelector('em').textContent = sc[k] + '%';
+      bars.appendChild(d);
+      requestAnimationFrame(function(){ requestAnimationFrame(function(){ d.querySelector('i').style.width = sc[k] + '%'; }); });
+    });
+    // zwakste laag, bij gelijke stand de laag die het laagst in het fundament ligt
+    var weak = ORDER.slice().reverse().reduce(function(a, k){ return sc[k] < sc[a] ? k : a; }, 'gov');
+    var adv = QS.advice[weak];
+    $('qs-adv-h').textContent = L(adv.h); $('qs-adv-p').textContent = L(adv.p);
+    $('qs-adv-a').textContent = L(adv.cta); $('qs-adv-a').href = adv.href;
+    var txt = (lang === 'en' ? 'My AI quick scan result: ' : 'Mijn uitslag van de AI-quickscan: ') + L(lv.name) + ' (' + tot + '%).\n' +
+      ORDER.slice().reverse().map(function(k){ return '- ' + L(QS.lname[k]) + ': ' + sc[k] + '%'; }).join('\n') + '\n\n' +
+      (lang === 'en' ? 'I would like to discuss this.' : 'Ik bespreek dit graag.');
+    try { sessionStorage.setItem('proficia-qs', txt); } catch(e){}
+    $('qs-res').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+  }
+  $('qs-back').addEventListener('click', function(){ if (cur > 0) { cur--; renderQ(); } });
+  $('qs-again').addEventListener('click', function(){ ans = []; cur = 0; renderQ(); });
+  onLang.push(function(){ if (!$('qs-res').hidden) renderRes(); else renderQ(); });
+  renderQ();
+}
+
+// oude links naar de scrollpagina doorsturen
+var OLD = {'#diensten':'diensten.html','#praktijk':'diensten.html#praktijk','#fundament':'aanpak.html#fundament','#aanpak':'aanpak.html','#werkwijze':'aanpak.html#werkwijze','#compliance':'aanpak.html#compliance','#training':'training.html','#over':'over.html','#contact':'over.html#contact'};
+if (!document.getElementById('cform') && OLD[location.hash] && /(^\/$|index\.html$)/.test(location.pathname)) location.replace(OLD[location.hash]);
+var start = 'nl';
+try { start = localStorage.getItem('proficia-lang') || 'nl'; } catch(e){}
+if (location.hash === '#en') start = 'en';
+if (start === 'en') setLang('en');
+</script>
+
+</body>
+</html>
